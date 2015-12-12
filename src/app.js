@@ -2,6 +2,7 @@
 
 
 var express = require('express'),
+    i18n = require('i18n'),
     posts = require('../content/posts.json'),
     app = express();
 
@@ -15,6 +16,14 @@ app.use('/static', express.static( __dirname + '/public'));
  */
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/templates');
+
+/**
+ * Localization
+ */
+i18n.configure({
+    locales:['en', 'el', 'es'],
+    directory: __dirname + '/locales'
+});
 
 /**
  * Routes

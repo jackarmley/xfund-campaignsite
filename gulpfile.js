@@ -9,16 +9,28 @@ var
     gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    cmq = require('gulp-combine-media-queries')
+    cmq = require('gulp-combine-media-queries'),
+    docs = require('sassdoc')
 ;
 
 // Define static assets
 var
     root = './src/public/',
     assets = {
-        styles: root + 'styles/'
+        styles: root + 'styles/',
+        docs: root + 'docs'
     }
 ;
+
+// Docs
+gulp.task('docs', function () {
+    docs(
+        assets.styles + 'sass',
+        {
+            dest : assets.docs
+        }
+    );
+});
 
 // Styles
 gulp.task('styles', function () {
