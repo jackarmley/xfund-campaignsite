@@ -1,0 +1,18 @@
+/**
+ * Site outer
+ */
+
+/**
+ * Pass breakpoint string to
+ * head tag, so the mediaquery.js
+ * plugin can parse it
+ */
+head{
+    font-family: pointlist($breakpoints);
+}
+html{
+    background: color(calm);
+}
+body{
+    background: color(white);
+}

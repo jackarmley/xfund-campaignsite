@@ -1,0 +1,46 @@
+////
+//// Colour variables
+//// @author Hatchd Digital
+//// @group Colors
+////
+
+/// White
+/// @type Variable
+$white: #fff;
+
+/// Black
+/// @type Variable
+$black: #000;
+
+/// Yellow
+/// @type Variable
+$yellow: #FFFB88;
+
+/// Red
+/// @type Variable
+$red: #aa3025;
+
+// A really different color,
+// explicitly for the ie8
+// support message
+// @type Color
+$supportmessage: #FFE04E;
+
+// Brand colours
+// @type Color
+$blush: #B30536;
+$ocean: #2E6D80;
+
+/// Colors map tying usage to variable names
+/// @type Map
+$colors: (
+    default: #333,
+    black: $black,
+    white: $white,
+    muted: lighten($black,50%),
+    highlight: $yellow,
+    link: $blush,
+    linkactive: $blush,
+    supportmessage: $supportmessage,
+    calm: $ocean
+);

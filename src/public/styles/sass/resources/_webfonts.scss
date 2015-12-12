@@ -1,0 +1,16 @@
+/**
+ * Webfonts
+ *
+ * Reference webfonts with an @font-face rule
+ */
+
+/**
+ * Iconic fill font,
+ * by @somerandomdude
+ */
+
+@import url('http://weloveiconfonts.com/api/?family=fontawesome');
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}

@@ -1,0 +1,83 @@
+/**
+ * Form elements
+ */
+
+form{
+	position: relative;
+	margin: 0 0 1em 0;
+    @at-root{
+    	fieldset{
+    		margin: 0;
+    		padding: 0;
+    		border: none;
+    	}
+    	legend{
+            @extend %hide;
+    	}
+    	label{
+            @include font(small,false,bold);
+    		display: block;
+    		margin: 2rem 0 1rem;
+    	}
+    	input:not([type=submit]),
+    	textarea,
+    	select{
+    		display: block;
+    		box-sizing: border-box;
+    		width: 100%;
+    		margin: 0 0 2rem;
+    		color: color(default);
+    	}
+        input:not([type=submit]),
+        textarea,
+        select[multiple]{
+            padding: 2rem;
+            border: .2rem solid color(calm);
+            border-radius: .5rem;
+            box-shadow: inset 0 .5rem fade-out(color(muted),.5);
+        }
+        input:not([type="radio"]):not([type="checkbox"]):not([type="range"]){
+            -webkit-appearance: none;
+        }
+        textarea{
+            min-height: 25rem;
+        }
+    	input[type="checkbox"],
+    	input[type="radio"]{
+    		display: inline-block;
+    		width: auto;
+    		float: left;
+    		border: none;
+    		margin: .25em .5em 0 0;
+    	}
+        input[type="file"]{
+            padding: 0;
+            border: none;
+        }
+        input[type="date"]{
+            padding-right: 0;
+        }
+    	button,
+        input[type="submit"]{
+            @extend .btn;
+    		padding: .5em;
+    		cursor: pointer;
+    	}
+        @each $prefix in (
+          '::-webkit-input-',
+          ':-moz-',
+          '::-moz-',
+          ':-ms-input-')
+        {
+            #{$prefix}placeholder{
+                color: color(link);
+                // Ensure color is consistent on Firefox,
+                // as placeholder is given an opacity value of
+                // .54 on Firefox by default
+                @if $prefix == '::-moz-' or $prefix == ':-moz-'{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
