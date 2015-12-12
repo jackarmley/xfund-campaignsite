@@ -47,5 +47,6 @@ gulp.task('watch',function(){
 // Default
 gulp.task('default', [
     'styles',
+    'docs',
     'watch'
 ]);

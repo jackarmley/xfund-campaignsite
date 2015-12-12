@@ -3,6 +3,7 @@
 
 var express = require('express'),
     i18n = require('i18n'),
+    marked = require('marked'),
     posts = require('../content/posts.json'),
     app = express();
 
@@ -33,7 +34,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
-    res.send("about");
+    res.render("about");
 });
 
 app.get('/blog/:id?', function(req, res){

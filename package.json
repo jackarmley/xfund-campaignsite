@@ -24,6 +24,7 @@
     "gulp-autoprefixer": "~3.1.0",
     "gulp-combine-media-queries": "~0.2.0",
     "i18n": "~0.5.0",
-    "sassdoc": "~2.1.18"
+    "sassdoc": "~2.1.18",
+    "marked": "~0.3.5"
   }
 }
