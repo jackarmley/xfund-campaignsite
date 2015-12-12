@@ -10,3 +10,17 @@ The world’s first peer to peer microgrant fund for crisis regions.
 1. Pull repo
 2. From repo directory: 
     1. npm install
+
+## Todo
+
+- localization
+- markdown parsing
+
+## Site map
+
+```
+index
+- about the fund
+- stories
+| - permalink for each story
+- contact (info for startup boat here?)
