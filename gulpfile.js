@@ -7,31 +7,23 @@
 // Include dependancies
 var
     gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cmq = require('gulp-combine-media-queries')
 ;
 
 // Define static assets
 var
-    root = 'public/',
+    root = './src/public/',
     assets = {
-        styles: root + '/styles/'
+        styles: root + 'styles/'
     }
 ;
 
 // Styles
-gulp.task('styles', function(){
-    return sass(assets.styles + 'sass/',{
-        style: 'compressed',
-        noCache: true
-    })
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions']
-    }))
-    .pipe(cmq({
-        log: true
-    }))
+gulp.task('styles', function () {
+  gulp.src(assets.styles + 'sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(assets.styles));
 });
 
