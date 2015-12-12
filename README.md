@@ -13,8 +13,7 @@ The world’s first peer to peer microgrant fund for crisis regions.
 
 ## Todo
 
-- localization
-- markdown parsing
+https://trello.com/b/P6LX0V1W/website
 
 ## Site map
 

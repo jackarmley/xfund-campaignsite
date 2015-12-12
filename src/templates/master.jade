@@ -3,8 +3,8 @@ html
     head
         include ./partials/_head
     body
-        header.page-header(role="banner")
-            a(href="") X fund
-        .page-content
+        include ./partials/_header
+        .page-content.layoutwrap
             block pagecontent
+        include ./partials/_footer
 

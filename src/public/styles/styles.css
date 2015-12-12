@@ -385,7 +385,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 200%;
+  font-size: 160%;
   line-height: 1.5;
   font-family: sans-serif;
   color: #333; }
@@ -706,6 +706,18 @@ table {
     font-style: italic; }
 
 /**
+ * Helpers
+ */
+/**
+ * Wrapper for main page containers
+ */
+.layoutwrap {
+  position: relative;
+  width: auto;
+  max-width: 60rem;
+  margin: auto; }
+
+/**
  * Site outer
  */
 /**
@@ -720,51 +732,38 @@ head {
  * Page header
  */
 .page-header {
-  background: linear-gradient(45deg, #B30536 48%, #cc063d 48%, #cc063d 52%, #B30536 52%) repeat top left/2rem 2rem #B30536;
-  box-shadow: inset 0 -0.5rem 1rem #a90533; }
-  .page-header .content-wrapper {
-    padding-top: 2rem;
-    padding-bottom: 2rem; }
-  .site-logo {
-    width: 20rem;
-    height: 4rem;
+  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed transparent; }
+  .page-header .layoutwrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+    .page-header .layoutwrap > * {
+      margin: 0; }
+  .page-logo {
+    width: 15rem;
+    height: 15rem;
     display: block;
     overflow: hidden;
-    margin: 0 auto .5rem;
-    background: url("../images/logo.svg") no-repeat center center/contain transparent;
-    text-indent: 100%;
+    background: url("../images/project-logo.svg") no-repeat center center/contain transparent;
+    text-indent: 105%;
     white-space: nowrap; }
-    @media (min-width: 50em) {
-      .site-logo {
-        margin-bottom: 0; } }
-  .languagechooser {
+  .page-nav {
     display: flex;
-    width: 20rem;
-    height: 4rem;
-    margin: auto; }
-    .languagechooser select {
-      flex: 2 1;
-      margin: auto .5rem auto 0; }
-    .languagechooser input[type="submit"] {
-      font-size: 0.75em;
-      flex: auto 1 2rem;
-      margin: auto;
-      padding: .5em;
-      background: #9a042f; }
-    @media (min-width: 50em) {
-      .languagechooser {
-        position: absolute;
-        top: 2rem;
-        right: 2rem; } }
+    flex-flow: column;
+    justify-content: center; }
+    .page-nav li {
+      display: inline-block;
+      margin: 0 0 0 1rem; }
+    .page-nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none; }
 
 /**
  * Page content
  */
-.page-content {
-  width: auto;
-  max-width: 60rem;
-  margin: auto; }
-
 /**
  * Page footer
  */
