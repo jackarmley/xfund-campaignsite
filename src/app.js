@@ -55,6 +55,6 @@ app.get('/blog/:id?', function(req, res){
 /**
  * Server
  */
-app.listen(3000, function(){
-    console.log("Frontend server running on port 3000!")
+app.listen(5000, function(){
+    console.log("Frontend server running on port 5000!")
 });
