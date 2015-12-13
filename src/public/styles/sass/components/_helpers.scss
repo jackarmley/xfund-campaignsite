@@ -15,3 +15,11 @@
         left: 2rem;
     };
 }
+
+/**
+ * Bold sell text, good for intros
+ */
+.selltext{
+    @include font('emphasized');
+    text-align: center;
+}

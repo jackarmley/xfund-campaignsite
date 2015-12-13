@@ -6,7 +6,11 @@
         top: 4rem;
         bottom: 4rem;
     }
-    border-top: .1rem solid color(muted);
+    background: color('link');
+    p,
+    a{
+        color: color('bg');
+    }
     p{
         margin-bottom: 0;
     }

@@ -63,4 +63,19 @@
             bottom: 4rem;
         };
     }
+
+    /**
+     * Modifiers
+     */
+
+    &--hideheading-true{
+        .shard-heading{
+            @extend %visual-hide;
+        }
+    }
+    &--sellintro-true{
+        .shard-heading + p{
+            @extend .selltext;
+        }
+    }
 }

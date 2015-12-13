@@ -14,51 +14,105 @@
         color('bold');
     background-blend-mode: overlay;
     .layoutwrap{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding: {
-            top: 8rem;
-            bottom: 8rem;
-        };
-        > * {
-            margin: 0;
+        @include breakpoint('pebble') {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: {
+                top: 8rem;
+                bottom: 8rem;
+            };
+            > * {
+                margin: 0;
+            }
         }
     }
     @at-root{
         .page-logo{
             @include setsize(8rem);
-            flex-basis: 8rem;
+            display: block;
             overflow: hidden;
-            margin: auto;
+            margin: 0;
             background: url('../images/project-logo.svg') no-repeat center center/contain transparent;
             text-indent: 105%;
             white-space: nowrap;
             @include breakpoint('pebble'){
                 @include setsize(15rem);
                 flex-basis: 15rem;
-                margin: 0;
             }
         }
         .page-nav{
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            li{
+            @include breakpoint('pebble'){
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                background: transparent;
+            }
+            &-trigger{
+                @include pos(a,t0 r3rem 2);
                 display: inline-block;
-                margin: 0;
+                margin-top: 3rem;
+                padding: .5rem;
+                border: .2rem solid currentColor;
+                border-radius: .2rem;
+                color: color(white);
+                text-decoration: none;
+                text-align: center;
+                cursor: pointer;
+                &:hover{
+                    color: color(white);
+                }
                 @include breakpoint('pebble'){
+                    display: none;
+                }
+            }
+            ul{
+                @include pos(a,t2rem r2rem 1);
+                display: none;
+                padding: 2rem 6rem 2rem 2rem;
+                border-radius: .3rem;
+                background: color(white);
+                box-shadow:
+                    0 .5rem 0 fade-out(color(black),.8),
+                    0 0 .2rem fade-out(color(black),.8);
+                @include breakpoint('pebble'){
+                    @include pos(r,t0 r0);
+                    display: block;
+                    padding: 0;
+                    border-radius: 0;
+                    background: transparent;
+                    box-shadow: none;
+                }
+            }
+            li{
+                display: inline;
+                margin: 0;
+                a{
+                    display: block;
+                    text-decoration: none;
+                }
+                @include breakpoint('pebble'){
+                    display: inline-block;
                     &:not(:last-of-type) a:after{
                         content:'/';
                         display: inline-block;
                         margin: 0 1rem;
                     }
+                    a{
+                        color: color(white);
+                    }
                 }
             }
-            a{
-                display: block;
-                color: color(white);
-                text-decoration: none;
+            &.is--active {
+                ul{
+                    display: block;
+                }
+                .page-nav-trigger{
+                    @include setsize(3.5rem);
+                    padding: 0;
+                    color: color('link');
+                    line-height: 2;
+                }
             }
         }
     }

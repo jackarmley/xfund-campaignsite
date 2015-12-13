@@ -22,6 +22,7 @@
 /// Hide a text element but ensure
 /// it is still readable via assistive technology
 %visual-hide{
+    @include setsize(1px);
     position: absolute;
     overflow: hidden;
     white-space: nowrap;

@@ -33,11 +33,12 @@ $ruby: #F02233;
 $teal: #05D6BF;
 $sun: #FF8432;
 $sky: #9AFEFC;
+$charcoal: #3A3B36;
 
 /// Colors map tying usage to variable names
 /// @type Map
 $colors: (
-    default: #333,
+    default: $charcoal,
     black: $black,
     white: $white,
     muted: lighten($black,50%),

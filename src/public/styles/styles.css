@@ -2,6 +2,15 @@
  * Act one
  * Built with Empty Coop, by Hatchd Digital
  */
+.shard--hideheading-true .shard-heading {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  text-align: left; }
+
 legend {
   display: none; }
 
@@ -395,7 +404,7 @@ body {
   font-size: 160%;
   line-height: 1.5;
   font-family: "montserratregular", sans-serif;
-  color: #333; }
+  color: #3A3B36; }
 
 /**
  * Headings
@@ -617,12 +626,11 @@ form {
     box-sizing: border-box;
     width: 100%;
     margin: 0 0 2rem;
-    color: #333; }
+    color: #3A3B36; }
   input:not([type=submit]),
   textarea,
   select[multiple] {
     padding: 2rem;
-    border: 0.2rem solid false;
     border-radius: .5rem;
     box-shadow: inset 0 0.5rem rgba(128, 128, 128, 0.5); }
   input:not([type="radio"]):not([type="checkbox"]):not([type="range"]) {
@@ -694,7 +702,7 @@ figure {
 table {
   width: 100%;
   margin: 0 0 1em 0;
-  border: 1px solid #333; }
+  border: 1px solid #3A3B36; }
   table,
   th,
   td {
@@ -702,12 +710,12 @@ table {
   th,
   td {
     padding: .5em;
-    border: 1px dotted #333;
+    border: 1px dotted #3A3B36;
     border-top: none;
     border-right: none;
     text-align: left; }
   thead th {
-    border-bottom: 2px solid #333; }
+    border-bottom: 2px solid #3A3B36; }
   tfoot td {
     border-bottom: none;
     font-size: .85em;
@@ -728,6 +736,13 @@ table {
   padding-left: 2rem; }
 
 /**
+ * Bold sell text, good for intros
+ */
+.selltext, .shard--sellintro-true .shard-heading + p {
+  font-size: 1.5em;
+  text-align: center; }
+
+/**
  * Shard
  */
 .shard {
@@ -740,6 +755,9 @@ table {
      */
   /**
      * Layout wrap helper mods
+     */
+  /**
+     * Modifiers
      */ }
   .shard:not(:nth-of-type(1)):before {
     width: 100%;
@@ -779,7 +797,7 @@ table {
  * plugin can parse it
  */
 head {
-  font-family: "{'\"\"'pebble\"\": \"(min-width:25em)\",\"\"mountain\"\": \"(min-width:50em)\"}"; }
+  font-family: "{'\"\"'pebble\"\": \"(min-width:43.75em)\",\"\"mountain\"\": \"(min-width:50em)\"}"; }
 
 html {
   background: #FDFFE8; }
@@ -790,45 +808,97 @@ html {
 .page-header {
   background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, linear-gradient(45deg, #FF8432, #ffc198) no-repeat center center #FF8432;
   background-blend-mode: overlay; }
-  .page-header .layoutwrap {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding-top: 8rem;
-    padding-bottom: 8rem; }
-    .page-header .layoutwrap > * {
-      margin: 0; }
+  @media (min-width: 43.75em) {
+    .page-header .layoutwrap {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding-top: 8rem;
+      padding-bottom: 8rem; }
+      .page-header .layoutwrap > * {
+        margin: 0; } }
   .page-logo {
     width: 8rem;
     height: 8rem;
-    flex-basis: 8rem;
+    display: block;
     overflow: hidden;
-    margin: auto;
+    margin: 0;
     background: url("../images/project-logo.svg") no-repeat center center/contain transparent;
     text-indent: 105%;
     white-space: nowrap; }
-    @media (min-width: 25em) {
+    @media (min-width: 43.75em) {
       .page-logo {
         width: 15rem;
         height: 15rem;
-        flex-basis: 15rem;
-        margin: 0; } }
-  .page-nav {
-    display: flex;
-    flex-flow: column;
-    justify-content: center; }
-    .page-nav li {
-      display: inline-block;
-      margin: 0; }
-      @media (min-width: 25em) {
+        flex-basis: 15rem; } }
+  @media (min-width: 43.75em) {
+    .page-nav {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      background: transparent; } }
+  .page-nav-trigger {
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    z-index: 2;
+    display: inline-block;
+    margin-top: 3rem;
+    padding: .5rem;
+    border: .2rem solid currentColor;
+    border-radius: .2rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer; }
+    .page-nav-trigger:hover {
+      color: #fff; }
+    @media (min-width: 43.75em) {
+      .page-nav-trigger {
+        display: none; } }
+  .page-nav ul {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1;
+    display: none;
+    padding: 2rem 6rem 2rem 2rem;
+    border-radius: .3rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 0.2rem rgba(0, 0, 0, 0.2); }
+    @media (min-width: 43.75em) {
+      .page-nav ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none; } }
+  .page-nav li {
+    display: inline;
+    margin: 0; }
+    .page-nav li a {
+      display: block;
+      text-decoration: none; }
+    @media (min-width: 43.75em) {
+      .page-nav li {
+        display: inline-block; }
         .page-nav li:not(:last-of-type) a:after {
           content: '/';
           display: inline-block;
-          margin: 0 1rem; } }
-    .page-nav a {
-      display: block;
-      color: #fff;
-      text-decoration: none; }
+          margin: 0 1rem; }
+        .page-nav li a {
+          color: #fff; } }
+  .page-nav.is--active ul {
+    display: block; }
+  .page-nav.is--active .page-nav-trigger {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    color: #05D6BF;
+    line-height: 2; }
 
 /**
  * Page content
@@ -839,7 +909,10 @@ html {
 .page-footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  border-top: 0.1rem solid gray; }
+  background: #05D6BF; }
+  .page-footer p,
+  .page-footer a {
+    color: #FDFFE8; }
   .page-footer p {
     margin-bottom: 0; }
 
