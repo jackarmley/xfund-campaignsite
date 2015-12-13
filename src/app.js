@@ -32,42 +32,42 @@ i18n.configure({
 app.get('/', function(req, res){
     res.locals.title = "Empowering independent volunteers";
     res.render("index", {
-        url : req.path
+        url : req.originalUrl
     });
 });
 
 app.get('/about', function(req, res){
     res.locals.title = "About";
     res.render("about", {
-        url : req.path
+        url : req.originalUrl
     });
 });
 
 app.get('/stories', function(req, res){
     res.locals.title = "Stories";
     res.render("todo", {
-        url : req.path
+        url : req.originalUrl
     });
 });
 
 app.get('/contact', function(req, res){
     res.locals.title = "Contact us";
     res.render("todo", {
-        url : req.path
+        url : req.originalUrl
     });
 });
 
 app.get('/transparency', function(req, res){
     res.locals.title = "Transparency";
     res.render("todo", {
-        url : req.path
+        url : req.originalUrl
     });
 });
 
 app.get('/toolkit', function(req, res){
     res.locals.title = "Toolkit";
     res.render("todo", {
-        url : req.path
+        url : req.originalUrl
     });
 });
 
@@ -76,7 +76,7 @@ app.get('/blog/:id?', function(req, res){
     if (id === undefined) {
         res.locals.title = "Blog";
         res.render("todo", {
-        url : req.path
+        url : req.originalUrl
     });
     } else {
         var post = posts[id] || {};
