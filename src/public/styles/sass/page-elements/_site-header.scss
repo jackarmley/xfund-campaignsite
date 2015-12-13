@@ -13,6 +13,7 @@
         ) no-repeat center center
         color('bold');
     background-blend-mode: overlay;
+
     .layoutwrap{
         @include breakpoint('pebble') {
             display: flex;
@@ -137,4 +138,29 @@
             }
         }
     }
+
+
+    /**
+     * Compact modifier
+     * For no-touch devices only
+     */
+    &--compact{
+        @include pos(fixed,1);
+        width: 100%;
+        @include breakpoint('pebble'){
+            .layoutwrap{
+                padding: {
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+            .page-logo{
+                @include setsize(6rem);
+                flex-basis: 6rem;
+            }
+        }
+    }
 }
+
+
+

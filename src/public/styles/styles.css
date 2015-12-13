@@ -807,7 +807,11 @@ html {
  */
 .page-header {
   background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, linear-gradient(45deg, #FF8432, #ffc198) no-repeat center center #FF8432;
-  background-blend-mode: overlay; }
+  background-blend-mode: overlay;
+  /**
+     * Compact modifier
+     * For no-touch devices only
+     */ }
   @media (min-width: 43.75em) {
     .page-header .layoutwrap {
       display: flex;
@@ -920,6 +924,18 @@ html {
     padding: 0;
     color: #05D6BF;
     line-height: 2; }
+  .page-header--compact {
+    position: fixed;
+    z-index: 1;
+    width: 100%; }
+    @media (min-width: 43.75em) {
+      .page-header--compact .layoutwrap {
+        padding-top: 0;
+        padding-bottom: 0; }
+      .page-header--compact .page-logo {
+        width: 6rem;
+        height: 6rem;
+        flex-basis: 6rem; } }
 
 /**
  * Page content
