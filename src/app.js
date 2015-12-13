@@ -41,14 +41,14 @@ app.get('/about', function(req, res){
 
 app.get('/contact', function(req, res){
     res.locals.title = "Contact us";
-    res.render("index");
+    res.render("todo");
 });
 
 app.get('/blog/:id?', function(req, res){
     var id = req.params.id;
     if (id === undefined) {
         res.locals.title = "Blog";
-        res.render("index");
+        res.render("todo");
     } else {
         var post = posts[id] || {};
         res.render('post',

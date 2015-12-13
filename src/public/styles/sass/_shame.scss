@@ -2,3 +2,29 @@
  * Shame file
  * Add quick changes here, to be incorperated properly at a later point
  */
+
+.featurelist{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 -1rem 1rem;
+    overflow: hidden;
+    list-style: none;
+    &-feature{
+        flex: 1 1 20rem;
+        margin: 0 1rem 2rem;
+    }
+}
+
+.image{
+
+    &--rounded{
+        img{
+            border-radius: 100%;
+        }
+    }
+
+    .featuelist-feature & {
+        margin: auto;
+    }
+}

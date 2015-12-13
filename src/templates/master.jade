@@ -1,11 +1,11 @@
+include partials/_mixins
 doctype html
 html
     head
         include partials/_head
     body
         include partials/_header
-        .page-content.layoutwrap
-            h1.page-heading #{locals.title}
+        .page-content
             block pagecontent
         include partials/_footer
 

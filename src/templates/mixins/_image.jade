@@ -1,0 +1,6 @@
+//- Image
+
+mixin image(src,alt,style)
+    -var style = style || "default";
+    figure(class="image image--#{style}")
+        img(src=src alt=alt)
