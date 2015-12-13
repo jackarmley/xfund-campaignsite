@@ -8,6 +8,10 @@
 .layoutwrap{
     position: relative;
     width: auto;
-    max-width: 60rem;
+    max-width: 80rem;
     margin: auto;
+    padding: {
+        right: 2rem;
+        left: 2rem;
+    };
 }

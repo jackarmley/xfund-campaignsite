@@ -30,18 +30,25 @@ i18n.configure({
  * Routes
  */
 app.get('/', function(req, res){
+    res.locals.title = "Empowering independent volunteers";
     res.render("index");
 });
 
 app.get('/about', function(req, res){
+    res.locals.title = "About";
     res.render("about");
+});
+
+app.get('/contact', function(req, res){
+    res.locals.title = "Contact us";
+    res.render("index");
 });
 
 app.get('/blog/:id?', function(req, res){
     var id = req.params.id;
     if (id === undefined) {
-        res.status(503);
-        res.send("Under construction!")
+        res.locals.title = "Blog";
+        res.render("index");
     } else {
         var post = posts[id] || {};
         res.render('post',

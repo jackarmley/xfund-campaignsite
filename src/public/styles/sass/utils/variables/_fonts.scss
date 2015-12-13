@@ -43,12 +43,22 @@ $serif: serif;
 $monospace: "Courier New", Courier, "Lucida Sans Typewriter",
 "Lucida Typewriter", monospace;
 
+/// Monserrat regular
+/// @type Variable
+/// @require {Map} $font-famillies
+$monserratregular: 'montserratregular', $sans;
+
+/// Monserrat bold
+/// @type Variable
+/// @require {Map} $font-famillies
+$monserratbold: 'montserratbold', $sans;
+
 
 /// Font-famillies map tieing usage to variable names
 /// @type Map
 $font-famillies: (
-    default: $sans,
-    pageheading: $sans,
+    default: $monserratregular,
+    pageheading: $monserratbold,
     smallprint: $sans
 );
 

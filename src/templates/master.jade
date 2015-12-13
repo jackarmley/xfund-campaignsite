@@ -5,6 +5,7 @@ html
     body
         include partials/_header
         .page-content.layoutwrap
+            h1.page-heading #{locals.title}
             block pagecontent
         include partials/_footer
 

@@ -25,7 +25,7 @@ $headings:(
   h6: fontsize(default)
 );
 #{map-keys( $headings )}{
-    @include font(false 1.3em,default);
+    @include font(false 1.3em,default, weight-normal);
     margin: 1em 0 .5em;
     @at-root{
         @each $headinglevel, $headingsize in ($headings){

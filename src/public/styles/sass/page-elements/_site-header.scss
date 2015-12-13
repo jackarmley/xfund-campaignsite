@@ -9,8 +9,8 @@
         flex-flow: row wrap;
         justify-content: space-between;
         padding: {
-            top: 3rem;
-            bottom: 3rem;
+            top: 8rem;
+            bottom: 8rem;
         };
         > * {
             margin: 0;
@@ -18,12 +18,18 @@
     }
     @at-root{
         .page-logo{
-            @include setsize(15rem);
-            display: block;
+            @include setsize(8rem);
+            flex-basis: 8rem;
             overflow: hidden;
+            margin: auto;
             background: url('../images/project-logo.svg') no-repeat center center/contain transparent;
             text-indent: 105%;
             white-space: nowrap;
+            @include breakpoint('pebble'){
+                @include setsize(15rem);
+                flex-basis: 15rem;
+                margin: 0;
+            }
         }
         .page-nav{
             display: flex;
