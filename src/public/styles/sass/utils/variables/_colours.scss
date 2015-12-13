@@ -28,8 +28,11 @@ $supportmessage: #FFE04E;
 
 // Brand colours
 // @type Color
-$blush: #B30536;
-$ocean: #2E6D80;
+$cream: #FDFFE8;
+$ruby: #F02233;
+$teal: #05D6BF;
+$sun: #FF8432;
+$sky: #9AFEFC;
 
 /// Colors map tying usage to variable names
 /// @type Map
@@ -39,8 +42,9 @@ $colors: (
     white: $white,
     muted: lighten($black,50%),
     highlight: $yellow,
-    link: $blush,
-    linkactive: $blush,
+    link: $teal,
+    linkactive: $teal,
     supportmessage: $supportmessage,
-    calm: $ocean
+    bg: $cream,
+    bold: $sun
 );

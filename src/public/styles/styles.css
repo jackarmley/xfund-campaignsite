@@ -565,10 +565,10 @@ dfn, abbr {
  * Link styles
  */
 a {
-  color: #B30536;
+  color: #05D6BF;
   text-decoration: underline; }
   a:hover {
-    color: #B30536;
+    color: #05D6BF;
     text-decoration: none; }
   a[href^="tel"] {
     color: inherit; }
@@ -581,19 +581,19 @@ a {
  */
 ::selection {
   color: #fff;
-  background: #B30536; }
+  background: #05D6BF; }
 
 ::-webkit-selection {
   color: #fff;
-  background: #B30536; }
+  background: #05D6BF; }
 
 ::-moz-selection {
   color: #fff;
-  background: #B30536; }
+  background: #05D6BF; }
 
 ::-ms-selection {
   color: #fff;
-  background: #B30536; }
+  background: #05D6BF; }
 
 /**
  * Form elements
@@ -622,7 +622,7 @@ form {
   textarea,
   select[multiple] {
     padding: 2rem;
-    border: 0.2rem solid #2E6D80;
+    border: 0.2rem solid false;
     border-radius: .5rem;
     box-shadow: inset 0 0.5rem rgba(128, 128, 128, 0.5); }
   input:not([type="radio"]):not([type="checkbox"]):not([type="range"]) {
@@ -646,15 +646,15 @@ form {
     padding: .5em;
     cursor: pointer; }
   ::-webkit-input-placeholder {
-    color: #B30536; }
+    color: #05D6BF; }
   :-moz-placeholder {
-    color: #B30536;
+    color: #05D6BF;
     opacity: 1; }
   ::-moz-placeholder {
-    color: #B30536;
+    color: #05D6BF;
     opacity: 1; }
   :-ms-input-placeholder {
-    color: #B30536; }
+    color: #05D6BF; }
 
 /**
  * Base image styles
@@ -746,7 +746,7 @@ table {
     height: 1rem;
     content: ' ';
     display: block;
-    background-image: linear-gradient(45deg, transparent 48%, #3BB2CD 48%, #3BB2CD 52%, transparent 52%), linear-gradient(-45deg, transparent 48%, #3BB2CD 48%, #3BB2CD 52%, transparent 52%);
+    background-image: linear-gradient(45deg, transparent 48%, #05D6BF 48%, #05D6BF 52%, transparent 52%), linear-gradient(-45deg, transparent 48%, #05D6BF 48%, #05D6BF 52%, transparent 52%);
     background-repeat: repeat-x;
     background-position: center center;
     background-size: 1rem 1rem;
@@ -759,8 +759,7 @@ table {
     height: 4rem;
     content: ' ';
     display: block;
-    border: .1rem solid #3BB2CD;
-    background: url("../images/xfundx.svg") no-repeat center center/2rem 2rem #fff;
+    background: url("../images/xfundx.svg") no-repeat center center/2rem 2rem #05D6BF;
     border-radius: 100%; }
   .shard-heading {
     font-size: 2em;
@@ -782,11 +781,15 @@ table {
 head {
   font-family: "{'\"\"'pebble\"\": \"(min-width:25em)\",\"\"mountain\"\": \"(min-width:50em)\"}"; }
 
+html {
+  background: #FDFFE8; }
+
 /**
  * Page header
  */
 .page-header {
-  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed transparent; }
+  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, linear-gradient(45deg, #FF8432, #ffc198) no-repeat center center #FF8432;
+  background-blend-mode: overlay; }
   .page-header .layoutwrap {
     display: flex;
     flex-flow: row wrap;

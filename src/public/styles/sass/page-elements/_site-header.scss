@@ -3,7 +3,16 @@
  */
 
 .page-header{
-    background: url('../images/header-sample.jpg') no-repeat bottom center/cover fixed transparent;
+    background:
+        url('../images/header-sample.jpg')
+        no-repeat bottom center/cover fixed,
+        linear-gradient(
+            45deg,
+            color('bold'),
+            lighten(color('bold'),20%)
+        ) no-repeat center center
+        color('bold');
+    background-blend-mode: overlay;
     .layoutwrap{
         display: flex;
         flex-flow: row wrap;

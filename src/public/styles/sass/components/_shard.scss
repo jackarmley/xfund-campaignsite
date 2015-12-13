@@ -18,15 +18,15 @@
                 linear-gradient(
                     45deg,
                     transparent 48%,
-                    #3BB2CD 48%,
-                    #3BB2CD 52%,
+                    color('link') 48%,
+                    color('link') 52%,
                     transparent 52%
                 ),
                 linear-gradient(
                     -45deg,
                     transparent 48%,
-                    #3BB2CD 48%,
-                    #3BB2CD 52%,
+                    color('link') 48%,
+                    color('link') 52%,
                     transparent 52%
                 ) ;
             repeat: repeat-x;
@@ -40,8 +40,7 @@
         @include setsize(4rem);
         content:' ';
         display: block;
-        border: .1rem solid #3BB2CD;
-        background: url('../images/xfundx.svg') no-repeat center center/2rem 2rem color(white);
+        background: url('../images/xfundx.svg') no-repeat center center/2rem 2rem color('link');
         border-radius: 100%;
     }
 
