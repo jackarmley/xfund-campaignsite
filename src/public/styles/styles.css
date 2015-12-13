@@ -731,13 +731,22 @@ table {
  * Shard
  */
 .shard {
-  position: relative; }
+  position: relative;
+  /**
+     * Divider
+     */
+  /**
+     * Heading
+     */
+  /**
+     * Layout wrap helper mods
+     */ }
   .shard:not(:nth-of-type(1)):before {
     width: 100%;
     height: 1rem;
     content: ' ';
     display: block;
-    background-image: linear-gradient(45deg, transparent 48%, #3BB2CD 48%, #3BB2CD 52%, transparent 52%), linear-gradient(45deg, transparent 48%, #3BB2CD 48%, #3BB2CD 52%, transparent 52%);
+    background-image: linear-gradient(45deg, transparent 48%, #3BB2CD 48%, #3BB2CD 52%, transparent 52%), linear-gradient(-45deg, transparent 48%, #3BB2CD 48%, #3BB2CD 52%, transparent 52%);
     background-repeat: repeat-x;
     background-position: center center;
     background-size: 1rem 1rem;
@@ -756,7 +765,8 @@ table {
   .shard-heading {
     font-size: 2em;
     margin: 0 0 4rem;
-    text-align: center; }
+    text-align: center;
+    text-transform: uppercase; }
   .shard .layoutwrap {
     padding-top: 4rem;
     padding-bottom: 4rem; }
@@ -806,7 +816,12 @@ head {
     justify-content: center; }
     .page-nav li {
       display: inline-block;
-      margin: 0 0 0 1rem; }
+      margin: 0; }
+      @media (min-width: 25em) {
+        .page-nav li:not(:last-of-type) a:after {
+          content: '/';
+          display: inline-block;
+          margin: 0 1rem; } }
     .page-nav a {
       display: block;
       color: #fff;

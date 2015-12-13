@@ -44,6 +44,16 @@ app.get('/contact', function(req, res){
     res.render("todo");
 });
 
+app.get('/transparency', function(req, res){
+    res.locals.title = "Transparency";
+    res.render("todo");
+});
+
+app.get('/toolkit', function(req, res){
+    res.locals.title = "Toolkit";
+    res.render("todo");
+});
+
 app.get('/blog/:id?', function(req, res){
     var id = req.params.id;
     if (id === undefined) {

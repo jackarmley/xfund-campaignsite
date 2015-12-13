@@ -37,7 +37,14 @@
             justify-content: center;
             li{
                 display: inline-block;
-                margin: 0 0 0 1rem;
+                margin: 0;
+                @include breakpoint('pebble'){
+                    &:not(:last-of-type) a:after{
+                        content:'/';
+                        display: inline-block;
+                        margin: 0 1rem;
+                    }
+                }
             }
             a{
                 display: block;

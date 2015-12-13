@@ -1,4 +1,5 @@
 extends master
 
 block pagecontent
-    p Todo
+    +shard(locals.title)
+        p Todo
