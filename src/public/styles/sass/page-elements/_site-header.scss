@@ -49,7 +49,7 @@
                 background: transparent;
             }
             &-trigger{
-                @include pos(a,t0 r3rem 2);
+                @include pos(a,'t-1rem' 'r2rem' 2);
                 display: inline-block;
                 margin-top: 3rem;
                 padding: .5rem;
@@ -67,7 +67,7 @@
                 }
             }
             ul{
-                @include pos(a,t2rem r2rem 1);
+                @include pos(a,t1rem r1rem 1);
                 display: none;
                 padding: 2rem 6rem 2rem 2rem;
                 border-radius: .3rem;
@@ -129,6 +129,7 @@
                 }
                 .page-nav-trigger{
                     @include setsize(3.5rem);
+                    top: -1rem;
                     padding: 0;
                     color: color('link');
                     line-height: 2;
