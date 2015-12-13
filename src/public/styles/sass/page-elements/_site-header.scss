@@ -85,23 +85,41 @@
                 }
             }
             li{
-                display: inline;
                 margin: 0;
+                text-transform: uppercase;
                 a{
+                    position: relative;
                     display: block;
                     padding: 1rem 0;
                     text-decoration: none;
+                    &.is--active{
+                        &:after{
+                            @include pos(a,t0 'l-2rem');
+                            @include setsize(.5rem 100%);
+                            content:' ';
+                            display: block;
+                            background: color(link);
+                        }
+                    }
                 }
                 @include breakpoint('pebble'){
                     display: inline-block;
-                    &:not(:last-of-type) a:after{
+                    &:not(:last-of-type):after{
                         content:'/';
                         display: inline-block;
                         margin: 0 1rem;
+                        color: color(white);
                     }
                     a{
+                        display: inline-block;
                         padding: 0;
                         color: color(white);
+                        &.is--active{
+                            &:after{
+                                @include pos(r,t0 l0);
+                                @include setsize(100% .2rem);
+                            }
+                        }
                     }
                 }
             }

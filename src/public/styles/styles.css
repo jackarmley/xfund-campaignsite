@@ -877,22 +877,40 @@ html {
         background: transparent;
         box-shadow: none; } }
   .page-nav li {
-    display: inline;
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase; }
     .page-nav li a {
+      position: relative;
       display: block;
       padding: 1rem 0;
       text-decoration: none; }
+      .page-nav li a.is--active:after {
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        width: 0.5rem;
+        height: 100%;
+        content: ' ';
+        display: block;
+        background: #05D6BF; }
     @media (min-width: 43.75em) {
       .page-nav li {
         display: inline-block; }
-        .page-nav li:not(:last-of-type) a:after {
+        .page-nav li:not(:last-of-type):after {
           content: '/';
           display: inline-block;
-          margin: 0 1rem; }
+          margin: 0 1rem;
+          color: #fff; }
         .page-nav li a {
+          display: inline-block;
           padding: 0;
-          color: #fff; } }
+          color: #fff; }
+          .page-nav li a.is--active:after {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0.2rem; } }
   .page-nav.is--active ul {
     display: block; }
   .page-nav.is--active .page-nav-trigger {

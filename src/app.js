@@ -31,34 +31,53 @@ i18n.configure({
  */
 app.get('/', function(req, res){
     res.locals.title = "Empowering independent volunteers";
-    res.render("index");
+    res.render("index", {
+        url : req.path
+    });
 });
 
 app.get('/about', function(req, res){
     res.locals.title = "About";
-    res.render("about");
+    res.render("about", {
+        url : req.path
+    });
+});
+
+app.get('/stories', function(req, res){
+    res.locals.title = "Stories";
+    res.render("todo", {
+        url : req.path
+    });
 });
 
 app.get('/contact', function(req, res){
     res.locals.title = "Contact us";
-    res.render("todo");
+    res.render("todo", {
+        url : req.path
+    });
 });
 
 app.get('/transparency', function(req, res){
     res.locals.title = "Transparency";
-    res.render("todo");
+    res.render("todo", {
+        url : req.path
+    });
 });
 
 app.get('/toolkit', function(req, res){
     res.locals.title = "Toolkit";
-    res.render("todo");
+    res.render("todo", {
+        url : req.path
+    });
 });
 
 app.get('/blog/:id?', function(req, res){
     var id = req.params.id;
     if (id === undefined) {
         res.locals.title = "Blog";
-        res.render("todo");
+        res.render("todo", {
+        url : req.path
+    });
     } else {
         var post = posts[id] || {};
         res.render('post',

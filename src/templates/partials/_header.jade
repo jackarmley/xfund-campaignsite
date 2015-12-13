@@ -4,8 +4,10 @@ header.page-header(role="banner")
         nav.page-nav(role="navigation")
             a.page-nav-trigger(role="button") Menu
             ul.page-nav-links
-                li: a(href="/about/") About
-                li: a(href="/blog/") Stories
-                li: a(href="/transparency/") Transparency
-                li: a(href="/toolkit/") Toolkit
-                li: a(href="/contact") Contact
+                -each menuItem in ["about", "stories", "transparency", "toolkit", "contact"]
+                    -if('/' + menuItem == url)
+                        -var activeClass = 'is--active'
+                    -else
+                        -var activeClass = ''
+                    li: a(href= '/' + menuItem class=activeClass)
+                        != menuItem
