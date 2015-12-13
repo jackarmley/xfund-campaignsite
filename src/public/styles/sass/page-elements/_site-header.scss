@@ -89,6 +89,7 @@
                 margin: 0;
                 a{
                     display: block;
+                    padding: 1rem 0;
                     text-decoration: none;
                 }
                 @include breakpoint('pebble'){
@@ -99,6 +100,7 @@
                         margin: 0 1rem;
                     }
                     a{
+                        padding: 0;
                         color: color(white);
                     }
                 }

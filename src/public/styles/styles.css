@@ -881,6 +881,7 @@ html {
     margin: 0; }
     .page-nav li a {
       display: block;
+      padding: 1rem 0;
       text-decoration: none; }
     @media (min-width: 43.75em) {
       .page-nav li {
@@ -890,6 +891,7 @@ html {
           display: inline-block;
           margin: 0 1rem; }
         .page-nav li a {
+          padding: 0;
           color: #fff; } }
   .page-nav.is--active ul {
     display: block; }
