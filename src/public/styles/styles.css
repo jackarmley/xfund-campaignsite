@@ -755,6 +755,9 @@ table {
      */
   /**
      * Modifiers
+     */
+  /**
+     * Themes
      */ }
   .shard-heading {
     font-size: 2em;
@@ -764,6 +767,8 @@ table {
   .shard .layoutwrap {
     padding-top: 4rem;
     padding-bottom: 4rem; }
+  .shard--theme-inverted {
+    background: #05D6BF; }
 
 /**
  * Site outer
@@ -946,12 +951,16 @@ html {
   justify-content: space-between;
   margin: 0 -1rem 1rem;
   overflow: hidden;
-  list-style: none; }
+  list-style: none;
+  text-align: center; }
   .featurelist-feature {
     flex: 1 1 20rem;
     margin: 0 1rem 2rem; }
 
 .image--rounded img {
+  min-width: 20rem;
+  max-width: 100%;
+  margin: auto;
   border-radius: 100%; }
 
 .featuelist-feature .image {

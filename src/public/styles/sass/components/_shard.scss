@@ -29,7 +29,6 @@
     /**
      * Modifiers
      */
-
     &--hideheading-true{
         .shard-heading{
             @extend %visual-hide;
@@ -38,6 +37,15 @@
     &--sellintro-true{
         .shard-heading + p{
             @extend .selltext;
+        }
+    }
+
+    /**
+     * Themes
+     */
+    &--theme{
+        &-inverted{
+            background: color(link);
         }
     }
 }

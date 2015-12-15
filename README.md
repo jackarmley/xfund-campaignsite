@@ -23,3 +23,8 @@ index
 - stories
 | - permalink for each story
 - contact (info for startup boat here?)
+```
+
+## Artwork credits
+
+- Tape by Christian Jackson from the Noun Project

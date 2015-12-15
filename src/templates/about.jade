@@ -9,13 +9,23 @@ block pagecontent
 
             By providing access to immediate, no-strings attached funding, we are also better places to respond to emergency needs as they happen and to truly provide what is needed in the crisis. This is in contrast to the long-term planning required for donation delivery and the mismatch between donations sent and needs on the ground.
 
-    +shard("Our aim is to")
-        :markdown
-            - cut back the red tape
-            - respond quickly to requests
-            - accept all type of emergency requests (equipment, aid items, medical items, payment for services such as rentals, printing etc.)
-            - include the community of volunteers in the decision-making process
-            - keep a transparent record of donations
+    +shard("Our aim is to",false,false,"inverted")
+        +featurelist
+            +featurelist-feature
+                +image("/static/images/about/aims/tape.svg", "Icon of a toll of tape", "rounded")
+                p Cut back the red tape
+            +featurelist-feature
+                +image("/static/images/about/aims/tape.svg", "Icon of a toll of tape", "rounded")
+                p Respond quickly to requests
+            +featurelist-feature
+                +image("/static/images/about/aims/tape.svg", "Icon of a toll of tape", "rounded")
+                p Accept all type of emergency requests
+            +featurelist-feature
+                +image("/static/images/about/aims/tape.svg", "Icon of a toll of tape", "rounded")
+                p Include the community of volunteers in the decision-making process
+            +featurelist-feature
+                +image("/static/images/about/aims/tape.svg", "Icon of a toll of tape", "rounded")
+                p Keep a transparent record of donations
 
     +shard("How the fund works")
         :markdown
