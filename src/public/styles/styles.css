@@ -930,11 +930,7 @@ html {
  */
 .page-footer {
   padding-top: 4rem;
-  padding-bottom: 4rem;
-  background: #05D6BF; }
-  .page-footer p,
-  .page-footer a {
-    color: white; }
+  padding-bottom: 4rem; }
   .page-footer p {
     margin-bottom: 0; }
 
