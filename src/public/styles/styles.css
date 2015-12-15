@@ -764,7 +764,7 @@ table {
     height: 1rem;
     content: ' ';
     display: block;
-    background-image: linear-gradient(45deg, transparent 48%, #05D6BF 48%, #05D6BF 52%, transparent 52%), linear-gradient(-45deg, transparent 48%, #05D6BF 48%, #05D6BF 52%, transparent 52%);
+    background-image: linear-gradient(-45deg, transparent 44%, #05D6BF 44%, #05D6BF 56%, transparent 56%);
     background-repeat: repeat-x;
     background-position: center center;
     background-size: 1rem 1rem;
@@ -777,6 +777,7 @@ table {
     height: 4rem;
     content: ' ';
     display: block;
+    margin-left: -2rem;
     background: url("../images/xfundx.svg") no-repeat center center/2rem 2rem #05D6BF;
     border-radius: 100%; }
   .shard-heading {
@@ -800,7 +801,7 @@ head {
   font-family: "{'\"\"'pebble\"\": \"(min-width:43.75em)\",\"\"mountain\"\": \"(min-width:50em)\"}"; }
 
 html {
-  background: #FDFFE8; }
+  background: white; }
 
 /**
  * Page header
@@ -822,8 +823,8 @@ html {
       .page-header .layoutwrap > * {
         margin: 0; } }
   .page-logo {
-    width: 8rem;
-    height: 8rem;
+    width: 16rem;
+    height: 6rem;
     display: block;
     overflow: hidden;
     margin: 0;
@@ -832,9 +833,9 @@ html {
     white-space: nowrap; }
     @media (min-width: 43.75em) {
       .page-logo {
-        width: 15rem;
-        height: 15rem;
-        flex-basis: 15rem; } }
+        width: 16rem;
+        height: 6rem;
+        flex-basis: 16rem; } }
   @media (min-width: 43.75em) {
     .page-nav {
       display: flex;
@@ -930,12 +931,12 @@ html {
     width: 100%; }
     @media (min-width: 43.75em) {
       .page-header--compact .layoutwrap {
-        padding-top: 0;
-        padding-bottom: 0; }
+        padding-top: .5rem;
+        padding-bottom: .5rem; }
       .page-header--compact .page-logo {
-        width: 6rem;
-        height: 6rem;
-        flex-basis: 6rem; } }
+        width: 14rem;
+        height: 5rem;
+        flex-basis: 14rem; } }
 
 /**
  * Page content
@@ -949,7 +950,7 @@ html {
   background: #05D6BF; }
   .page-footer p,
   .page-footer a {
-    color: #FDFFE8; }
+    color: white; }
   .page-footer p {
     margin-bottom: 0; }
 

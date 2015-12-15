@@ -30,7 +30,7 @@
     }
     @at-root{
         .page-logo{
-            @include setsize(8rem);
+            @include setsize(16rem 6rem);
             display: block;
             overflow: hidden;
             margin: 0;
@@ -38,8 +38,8 @@
             text-indent: 105%;
             white-space: nowrap;
             @include breakpoint('pebble'){
-                @include setsize(15rem);
-                flex-basis: 15rem;
+                @include setsize(16rem 6rem);
+                flex-basis: 16rem;
             }
         }
         .page-nav{
@@ -150,13 +150,13 @@
         @include breakpoint('pebble'){
             .layoutwrap{
                 padding: {
-                    top: 0;
-                    bottom: 0;
+                    top: .5rem;
+                    bottom: .5rem;
                 }
             }
             .page-logo{
-                @include setsize(6rem);
-                flex-basis: 6rem;
+                @include setsize(14rem 5rem);
+                flex-basis: 14rem;
             }
         }
     }

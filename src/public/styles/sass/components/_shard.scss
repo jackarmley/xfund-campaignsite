@@ -16,19 +16,12 @@
         background:{
             image :
                 linear-gradient(
-                    45deg,
-                    transparent 48%,
-                    color('link') 48%,
-                    color('link') 52%,
-                    transparent 52%
-                ),
-                linear-gradient(
                     -45deg,
-                    transparent 48%,
-                    color('link') 48%,
-                    color('link') 52%,
-                    transparent 52%
-                ) ;
+                    transparent 44%,
+                    color('link') 44%,
+                    color('link') 56%,
+                    transparent 56%
+                );
             repeat: repeat-x;
             position: center center;
             size: 1rem 1rem;
@@ -40,6 +33,7 @@
         @include setsize(4rem);
         content:' ';
         display: block;
+        margin-left: -2rem;
         background: url('../images/xfundx.svg') no-repeat center center/2rem 2rem color('link');
         border-radius: 100%;
     }

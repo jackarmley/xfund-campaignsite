@@ -34,7 +34,6 @@ app.followNav = function() {
         content = document.querySelector('.page-content');
         scrollLevel = 0,
         compactClass = 'page-header--compact';
-    console.log(content.style.paddingTop);
     window.addEventListener('scroll', function() {
         setInterval(
             function() {
