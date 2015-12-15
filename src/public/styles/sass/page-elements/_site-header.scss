@@ -8,13 +8,17 @@
         no-repeat bottom center/cover fixed,
         linear-gradient(
             45deg,
-            color('bold'),
-            lighten(color('bold'),20%)
+            #FF5891,
+            #FF5891
         ) no-repeat center center
-        color('bold');
-    background-blend-mode: overlay;
+        #C700F9;
+    background-blend-mode: multiply;
 
     .layoutwrap{
+        padding: {
+            top: 1rem;
+            bottom: 1rem;
+        };
         @include breakpoint('pebble') {
             display: flex;
             flex-flow: row wrap;
@@ -30,7 +34,7 @@
     }
     @at-root{
         .page-logo{
-            @include setsize(16rem 6rem);
+            @include setsize(14rem 5rem);
             display: block;
             overflow: hidden;
             margin: 0;
@@ -50,7 +54,7 @@
                 background: transparent;
             }
             &-trigger{
-                @include pos(a,'t-1rem' 'r2rem' 2);
+                @include pos(a,'t-1.5rem' 'r2rem' 2);
                 display: inline-block;
                 margin-top: 3rem;
                 padding: .5rem;
@@ -150,8 +154,8 @@
         @include breakpoint('pebble'){
             .layoutwrap{
                 padding: {
-                    top: .5rem;
-                    bottom: .5rem;
+                    top: 1rem;
+                    bottom: 1rem;
                 }
             }
             .page-logo{

@@ -7,38 +7,6 @@
     position: relative;
 
     /**
-     * Divider
-     */
-    &:not(:nth-of-type(1)):before{
-        @include setsize(100% 1rem);
-        content:' ';
-        display: block;
-        background:{
-            image :
-                linear-gradient(
-                    -45deg,
-                    transparent 44%,
-                    color('link') 44%,
-                    color('link') 56%,
-                    transparent 56%
-                );
-            repeat: repeat-x;
-            position: center center;
-            size: 1rem 1rem;
-            color: transparent;
-        };
-    }
-    &:not(:nth-of-type(1)):after{
-        @include pos(a,'t-1.5rem' 'l50%');
-        @include setsize(4rem);
-        content:' ';
-        display: block;
-        margin-left: -2rem;
-        background: url('../images/xfundx.svg') no-repeat center center/2rem 2rem color('link');
-        border-radius: 100%;
-    }
-
-    /**
      * Heading
      */
     &-heading{
