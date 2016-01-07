@@ -5,7 +5,9 @@
 .shard{
 
     position: relative;
-
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
     /**
      * Heading
      */
@@ -45,7 +47,8 @@
      */
     &--theme{
         &-inverted{
-            background: color(link);
+            background-color: color(link);
+            color: color(white);
         }
     }
 }

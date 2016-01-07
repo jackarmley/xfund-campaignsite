@@ -1,9 +1,10 @@
 //- Content chip
-mixin shard(heading, sellintro, hideheading, theme)
+mixin shard(heading, sellintro, hideheading, theme, bg)
     -var sellintro = sellintro || false;
     -var hideheading = hideheading || false;
     -var theme = theme || "default";
-    section.shard(class="shard--sellintro-#{sellintro} shard--hideheading-#{hideheading} shard--theme-#{theme}")
+    - var bg = bg || false;
+    section.shard(class="shard--sellintro-#{sellintro} shard--hideheading-#{hideheading} shard--theme-#{theme}" style="background-image:url(#{bg});")
         .layoutwrap
             h2.shard-heading= heading
             block

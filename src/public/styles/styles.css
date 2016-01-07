@@ -2,7 +2,8 @@
  * Act one
  * Built with Empty Coop, by Hatchd Digital
  */
-.shard--hideheading-true .shard-heading {
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+.hide, .shard--hideheading-true .shard-heading {
   width: 1px;
   height: 1px;
   position: absolute;
@@ -626,13 +627,13 @@ form {
     box-sizing: border-box;
     width: 100%;
     margin: 0 0 2rem;
+    border: none;
     color: #3A3B36; }
   input:not([type=submit]),
   textarea,
   select[multiple] {
     padding: 2rem;
-    border-radius: .5rem;
-    box-shadow: inset 0 0.5rem rgba(128, 128, 128, 0.5); }
+    border-radius: .5rem; }
   input:not([type="radio"]):not([type="checkbox"]):not([type="range"]) {
     -webkit-appearance: none; }
   textarea {
@@ -654,15 +655,15 @@ form {
     padding: .5em;
     cursor: pointer; }
   ::-webkit-input-placeholder {
-    color: #05D6BF; }
+    color: #3A3B36; }
   :-moz-placeholder {
-    color: #05D6BF;
+    color: #3A3B36;
     opacity: 1; }
   ::-moz-placeholder {
-    color: #05D6BF;
+    color: #3A3B36;
     opacity: 1; }
   :-ms-input-placeholder {
-    color: #05D6BF; }
+    color: #3A3B36; }
 
 /**
  * Base image styles
@@ -742,11 +743,17 @@ table {
   font-size: 1.5em;
   text-align: center; }
 
+.center {
+  text-align: center; }
+
 /**
  * Shard
  */
 .shard {
   position: relative;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
   /**
      * Heading
      */
@@ -768,7 +775,8 @@ table {
     padding-top: 4rem;
     padding-bottom: 4rem; }
   .shard--theme-inverted {
-    background: #05D6BF; }
+    background-color: #05D6BF;
+    color: #fff; }
 
 /**
  * Site outer
@@ -929,10 +937,16 @@ html {
  * Page footer
  */
 .page-footer {
+  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, linear-gradient(45deg, #FF5891, #FF5891) no-repeat center center #C700F9;
+  background-blend-mode: multiply;
   padding-top: 4rem;
-  padding-bottom: 4rem; }
+  padding-bottom: 4rem;
+  text-align: center; }
   .page-footer p {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #fff; }
+  .page-footer a {
+    color: #fff; }
 
 /**
  * Bespoke page layout template
@@ -961,3 +975,41 @@ html {
 
 .featuelist-feature .image {
   margin: auto; }
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif; }
+
+.socialicons {
+  margin: 0;
+  text-align: center; }
+  .socialicons li {
+    display: inline-block;
+    margin: 0 1rem 1rem; }
+  .socialicons a {
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    border-radius: 100%;
+    color: #fff;
+    background: #05D6BF;
+    line-height: 6rem;
+    text-decoration: none;
+    text-align: center;
+    transition: .1s ease; }
+    .socialicons a:hover {
+      background: #FF4BCD;
+      transform: scale(1.1); }
+
+.join {
+  display: flex; }
+  .join input {
+    margin: 0 2rem 0 0; }
+  .join button {
+    flex-basis: 10rem;
+    border: none;
+    border-radius: .5rem;
+    background: #05D6BF;
+    color: #fff; }
+    .join button:hover {
+      background: #FF4BCD; }

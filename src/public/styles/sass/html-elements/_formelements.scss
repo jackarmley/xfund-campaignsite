@@ -26,6 +26,7 @@ form{
     		box-sizing: border-box;
     		width: 100%;
     		margin: 0 0 2rem;
+            border: none;
     		color: color(default);
     	}
         input:not([type=submit]),
@@ -33,7 +34,6 @@ form{
         select[multiple]{
             padding: 2rem;
             border-radius: .5rem;
-            box-shadow: inset 0 .5rem fade-out(color(muted),.5);
         }
         input:not([type="radio"]):not([type="checkbox"]):not([type="range"]){
             -webkit-appearance: none;
@@ -68,7 +68,7 @@ form{
           ':-ms-input-')
         {
             #{$prefix}placeholder{
-                color: color(link);
+                color: color(default);
                 // Ensure color is consistent on Firefox,
                 // as placeholder is given an opacity value of
                 // .54 on Firefox by default

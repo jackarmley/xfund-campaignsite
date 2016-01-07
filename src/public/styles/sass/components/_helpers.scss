@@ -23,3 +23,11 @@
     @include font('emphasized');
     text-align: center;
 }
+
+.center{
+    text-align: center;
+}
+
+.hide{
+    @extend %visual-hide;
+}
