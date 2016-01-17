@@ -1,0 +1,31 @@
+extends master
+
+block pagecontent
+    +shard(locals.title, true, true)
+        :markdown
+            We are X Fund, the world’s first peer-to-peer microfund for crisis regions designed for rapid response in real time. It’s powered by people like you.
+
+            We give NGOs and volunteers at the frontlines **access to the financial resources they need to deal with unexpected emergencies.**
+
+            We work where immediate responsiveness matters. We cut time and red tape to impact, and are the first peer-led microfund to time our impact by how quickly we can respond to the community -- in hours, or less, with complete transparency every step of the way.
+
+    +shard('Join us', true, false, 'inverted', '/static/images/bg-1.jpg')
+        :markdown
+            **Join us to launch the X Fund at the World Economic Fund in Davos,** (on 20 Jan) and celebrate the **#HumanSideoftheCoin.**
+
+        p.center See where we go next&hellip;
+
+        form.join(action="//WeAreXFund.us12.list-manage.com/subscribe/post?u=21c072840f77d7eec864382ae&amp;id=8123f5367f" method="post" id="mc-embedded-subscribe-form" target="_blank" novalidate)
+            label(for="mce-EMAIL").hide Join our mailing list
+            input(type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Join our mailing list")
+            // real people should not fill this in and expect good things // do not remove this or risk form bot signups
+            div.hide(aria-hidden="true")
+                input(type="text" name="b_21c072840f77d7eec864382ae_8123f5367f" tabindex="-1" value="")
+            button#mc-embedded-subscribe(type="submit" name="subscribe") Join!
+
+    +shard('Share the love', true)
+        ul.socialicons
+            li: a.icon-twitter(href="https://twitter.com/wearexfund")
+                span.hide Twitter
+            li: a.icon-facebook(href="http://www.facebook.com/Wearexfund")
+                span.hide Facebook
