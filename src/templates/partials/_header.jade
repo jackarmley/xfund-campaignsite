@@ -3,7 +3,7 @@ header.page-header(role="banner")
         .layoutwrap
             a.page-nav-trigger(role="button") Menu
             ul.page-nav-links
-                -each menuItem in ["whyxfund", "stories", "transparency", "toolkit"]
+                -each menuItem in ["whyxfund", "stories", "transparency", "toolkit", "contact"]
                     -if('/' + menuItem == url)
                         -var activeClass = 'is--active'
                     -else

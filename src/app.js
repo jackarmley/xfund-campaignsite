@@ -59,7 +59,7 @@ app.get('/stories', function(req, res){
 
 app.get('/contact', function(req, res){
     res.locals.title = "Contact us";
-    res.render("todo", {
+    res.render("contact", {
         url : req.originalUrl
     });
 });
