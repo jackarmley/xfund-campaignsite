@@ -2,7 +2,7 @@ extends master
 
 block pagecontent
     +shard(locals.title, true, true)
-        :markdown
+        :marked
             We are X Fund, the world’s first peer-to-peer microfund for crisis regions designed for rapid response in real time. It’s powered by people like you.
 
             We give NGOs and volunteers at the frontlines **access to the financial resources they need to deal with unexpected emergencies.**
@@ -10,7 +10,7 @@ block pagecontent
             We work where immediate responsiveness matters. We cut time and red tape to impact, and are the first peer-led microfund to time our impact by how quickly we can respond to the community -- in hours, or less, with complete transparency every step of the way.
 
     +shard('Join us', true, false, 'inverted', '/static/images/bg-1.jpg')
-        :markdown
+        :marked
             **Join us to launch the X Fund at the World Economic Fund in Davos,** (on 20 Jan) and celebrate the **#HumanSideoftheCoin.**
 
         p.center See where we go next&hellip;

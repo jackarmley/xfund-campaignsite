@@ -88,14 +88,7 @@ app.counter = function(yr,m,d) {
  * Init
  */
 
-app.counter(2016,01,20);
-
-setInterval(
-function () {
-    app.counter(2016,01,20)
-}, 1000 );
-
-// app.menuToggle();
-// if(!Modernizr.touchevents) {
-//     app.followNav();
-// }
+app.menuToggle();
+if(!Modernizr.touchevents) {
+    app.followNav();
+}

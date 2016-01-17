@@ -576,11 +576,11 @@ blockquote {
       content: '\201C'; }
     blockquote > p:first-child:after {
       content: '\201D'; }
-  blockquote footer p {
+  blockquote cite {
     margin: -.5em 0 0 0;
     font-size: .85em;
     font-style: italic; }
-    blockquote footer p:before {
+    blockquote cite:before {
       content: '-'; }
 
 /**
@@ -899,6 +899,21 @@ table {
     color: #fff; }
 
 /**
+ * Buttons
+ */
+.button {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 2rem;
+  border-radius: .5rem;
+  background: #05D6BF;
+  color: #fff;
+  text-decoration: none; }
+  .button:hover {
+    background: #FF4BCD;
+    color: #fff; }
+
+/**
  * Site outer
  */
 /**
@@ -922,38 +937,21 @@ html {
      * Compact modifier
      * For no-touch devices only
      */ }
-  .page-header .layoutwrap {
+  .page-header > .layoutwrap {
     padding-top: 1rem;
     padding-bottom: 1rem; }
-    @media (min-width: 43.75em) {
-      .page-header .layoutwrap {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding-top: 8rem;
-        padding-bottom: 8rem; }
-        .page-header .layoutwrap > * {
-          margin: 0; } }
   .page-logo {
     width: 14rem;
     height: 5rem;
-    display: block;
+    display: inline-block;
     overflow: hidden;
-    margin: 0;
+    margin: 0 0 1rem;
     background: url("../images/project-logo.svg") no-repeat center center/contain transparent;
     text-indent: 105%;
     white-space: nowrap; }
-    @media (min-width: 43.75em) {
-      .page-logo {
-        width: 16rem;
-        height: 6rem;
-        flex-basis: 16rem; } }
-  @media (min-width: 43.75em) {
-    .page-nav {
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      background: transparent; } }
+  .page-tagline {
+    margin-bottom: 0;
+    color: #fff; }
   .page-nav-trigger {
     position: absolute;
     top: -1.5rem;
@@ -970,9 +968,6 @@ html {
     cursor: pointer; }
     .page-nav-trigger:hover {
       color: #fff; }
-    @media (min-width: 43.75em) {
-      .page-nav-trigger {
-        display: none; } }
   .page-nav ul {
     position: absolute;
     top: 1rem;
@@ -983,17 +978,8 @@ html {
     border-radius: .3rem;
     background: #fff;
     box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 0.2rem rgba(0, 0, 0, 0.2); }
-    @media (min-width: 43.75em) {
-      .page-nav ul {
-        position: relative;
-        top: 0;
-        right: 0;
-        display: block;
-        padding: 0;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none; } }
   .page-nav li {
+    display: inline;
     margin: 0;
     text-transform: uppercase; }
     .page-nav li a {
@@ -1010,7 +996,39 @@ html {
         content: ' ';
         display: block;
         background: #05D6BF; }
-    @media (min-width: 43.75em) {
+  .page-nav.is--active ul {
+    display: block; }
+  .page-nav.is--active .page-nav-trigger {
+    width: 3.5rem;
+    height: 3.5rem;
+    top: -1rem;
+    padding: 0;
+    color: #05D6BF;
+    line-height: 2; }
+  @media (min-width: 43.75em) {
+    .page-header > .layoutwrap {
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem; }
+    .page-logo {
+      width: 16rem;
+      height: 6rem;
+      flex-basis: 16rem; }
+    .page-nav {
+      padding: 1rem 0;
+      background: rgba(56, 0, 71, 0.5);
+      text-align: center; }
+      .page-nav-trigger {
+        display: none; }
+      .page-nav ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none; }
       .page-nav li {
         display: inline-block; }
         .page-nav li:not(:last-of-type):after {
@@ -1028,27 +1046,20 @@ html {
             left: 0;
             width: 100%;
             height: 0.2rem; } }
-  .page-nav.is--active ul {
-    display: block; }
-  .page-nav.is--active .page-nav-trigger {
-    width: 3.5rem;
-    height: 3.5rem;
-    top: -1rem;
-    padding: 0;
-    color: #05D6BF;
-    line-height: 2; }
   .page-header--compact {
     position: fixed;
     z-index: 1;
     width: 100%; }
+    .page-header--compact .page-tagline {
+      display: none; }
     @media (min-width: 43.75em) {
-      .page-header--compact .layoutwrap {
+      .page-header--compact > .layoutwrap {
         padding-top: 1rem;
         padding-bottom: 1rem; }
       .page-header--compact .page-logo {
         width: 14rem;
         height: 5rem;
-        flex-basis: 14rem; } }
+        margin-bottom: 0; } }
 
 /**
  * Page content

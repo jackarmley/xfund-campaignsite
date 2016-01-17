@@ -1,13 +1,15 @@
 header.page-header(role="banner")
-    .layoutwrap
-        a.page-logo(href="/") X fund
-        nav.page-nav(role="navigation")
+    nav.page-nav(role="navigation")
+        .layoutwrap
             a.page-nav-trigger(role="button") Menu
             ul.page-nav-links
-                -each menuItem in ["about", "stories", "transparency", "toolkit", "contact"]
+                -each menuItem in ["whyxfund", "stories", "transparency", "toolkit"]
                     -if('/' + menuItem == url)
                         -var activeClass = 'is--active'
                     -else
                         -var activeClass = ''
                     li: a(href= '/' + menuItem class=activeClass)
                         != menuItem
+    .layoutwrap
+        a.page-logo(href="/") X fund
+        p.page-tagline The first peer-to-peer microfind for crisis regions designed for rapid response.

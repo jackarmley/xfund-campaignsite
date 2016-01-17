@@ -1,0 +1,17 @@
+/**
+ * Buttons
+ */
+
+.button{
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 2rem;
+    border-radius: .5rem;
+    background: color('link');
+    color: color(white);
+    text-decoration: none;
+    &:hover{
+        background: #FF4BCD;
+        color: color(white);
+    }
+}

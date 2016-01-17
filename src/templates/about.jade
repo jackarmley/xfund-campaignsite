@@ -2,7 +2,7 @@ extends master
 
 block pagecontent
     +shard(locals.title, true)
-        :markdown
+        :marked
             The X Fund aims to empower independent volunteers and small organisations in crisis areas to deliver the best possible relief and care to those in need.
 
             Fundraising is one of the most complex and time-consuming activities, making it difficult for volunteers to simultaneously fundraise and provide relief work. This is particularly the case for small amounts for emergency purposes.
@@ -28,7 +28,7 @@ block pagecontent
                 p Keep a transparent record of donations
 
     +shard("How the fund works")
-        :markdown
+        :marked
             1. Ask the stakeholders: we have created a simple questionnaire so that stakeholders in each location:
                 - can specify the type of expenses that the fund should authorise (should we pay volunteer accommodation, should we fund purchase of medical equipment? etc),
                 - define which types of organisations should be supported and benefit from access to funding,
@@ -44,7 +44,7 @@ block pagecontent
             8. Donation logged as completed on website along with proof of purchase/payment
 
     +shard("next steps",false,false,"inverted")
-        :markdown
+        :marked
             The fund will be initially activated for Lesvos but every time we activate another location and map out the active team there, the fund will also start being used for their requests (after we have asked the stakeholders themselves to determine the rules). In that way, it is a common pot of money but the rules and reasons by which each location accesses this same money are tailored to their specific needs.
 
             The X Fund is an initiative by Startupboat, an organisation developing tech & startup solutions for crisis regions. It is a complementary tool to the “Support X” Tool Kit developed by Startupboat. “Support X” is a set of different tools tackling challenges such as communication, coordination, information dissemination and logistics in areas of crisis and emergency conditions. The X Fund comes into these same areas to provide access to immediate funding to stakeholders. It can be implemented in areas where Support X is also implemented as well as areas where “Support X” tools are not being used.

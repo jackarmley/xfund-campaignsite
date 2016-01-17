@@ -43,9 +43,16 @@ app.get('/about', function(req, res){
     });
 });
 
+app.get('/whyxfund', function(req, res){
+    res.locals.title = "Why X Fund";
+    res.render("whyxfund", {
+        url : req.originalUrl
+    });
+});
+
 app.get('/stories', function(req, res){
     res.locals.title = "Stories";
-    res.render("todo", {
+    res.render("stories", {
         url : req.originalUrl
     });
 });
@@ -59,14 +66,14 @@ app.get('/contact', function(req, res){
 
 app.get('/transparency', function(req, res){
     res.locals.title = "Transparency";
-    res.render("todo", {
+    res.render("transparency", {
         url : req.originalUrl
     });
 });
 
 app.get('/toolkit', function(req, res){
     res.locals.title = "Toolkit";
-    res.render("todo", {
+    res.render("toolkit", {
         url : req.originalUrl
     });
 });

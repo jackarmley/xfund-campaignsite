@@ -2,16 +2,43 @@ extends master
 
 block pagecontent
     +shard(locals.title, true, true)
-        :markdown
-            The X Fund aims to empower independent volunteers and small organisations in crisis areas to deliver the best possible relief and care to those in need. [Read more](/about)
-    +shard('Stories', true)
+        p Launch the world’s first XFund in 30 days.
+        include partials/_activatexfund
         p.
-            Read our inspiring stories
+            We are X Fund is the world’s first peer-to-peer microfund for crisis
+            regions designed for rapid response where time matters. It’s
+            powered by people like you.
+        p.
+            We give NGOs and volunteers at the frontlines access to the
+            financial resources they need to deal with unexpected emergencies.
+
+    +shard('Discover the real story', true)
+        p Experience the real stories behind the #HumanSideoftheCoin.
+        p.
+            We work where immediate responsiveness matters. We cut time and red
+            tape to impact, and are the first peer-led microfund to time our
+            impact by how quickly we can respond to the community -- in hours,
+            or less, with complete transparency every step of the way.
         +featurelist
             +featurelist-feature
-                +image("http://placehold.it/300x300", "Sample", "rounded")
-                p Content for feature
+                +image('http://placehold.it/300x300', 'Blog 1', 'rounded')
             +featurelist-feature
-                +image("http://placehold.it/300x300", "Sample", "rounded")
+                +image('http://placehold.it/300x300', 'Blog 2', 'rounded')
             +featurelist-feature
-                +image("http://placehold.it/300x300", "Sample", "rounded")
+                +image('http://placehold.it/300x300', 'Blog 3', 'rounded')
+    +shard('Share the love', true)
+        ul.socialicons
+            li: a.icon-twitter(href="https://twitter.com/wearexfund")
+                span.hide Twitter
+            li: a.icon-facebook(href="http://www.facebook.com/Wearexfund")
+                span.hide Facebook
+        p.center See where we go next&hellip;
+        form.join(action="//WeAreXFund.us12.list-manage.com/subscribe/post?u=21c072840f77d7eec864382ae&amp;id=8123f5367f" method="post" id="mc-embedded-subscribe-form" target="_blank" novalidate)
+            label(for="mce-EMAIL").hide Join our mailing list
+            input(type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Join our mailing list")
+            // real people should not fill this in and expect good things // do not remove this or risk form bot signups
+            div.hide(aria-hidden="true")
+                input(type="text" name="b_21c072840f77d7eec864382ae_8123f5367f" tabindex="-1" value="")
+            button#mc-embedded-subscribe(type="submit" name="subscribe") Join!
+
+

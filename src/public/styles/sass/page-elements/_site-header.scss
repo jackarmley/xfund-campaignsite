@@ -14,45 +14,27 @@
         #C700F9;
     background-blend-mode: multiply;
 
-    .layoutwrap{
+    > .layoutwrap{
         padding: {
             top: 1rem;
             bottom: 1rem;
         };
-        @include breakpoint('pebble') {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            padding: {
-                top: 8rem;
-                bottom: 8rem;
-            };
-            > * {
-                margin: 0;
-            }
-        }
     }
     @at-root{
         .page-logo{
             @include setsize(14rem 5rem);
-            display: block;
+            display: inline-block;
             overflow: hidden;
-            margin: 0;
+            margin: 0 0 1rem;
             background: url('../images/project-logo.svg') no-repeat center center/contain transparent;
             text-indent: 105%;
             white-space: nowrap;
-            @include breakpoint('pebble'){
-                @include setsize(16rem 6rem);
-                flex-basis: 16rem;
-            }
+        }
+        .page-tagline{
+            margin-bottom: 0;
+            color: color(white);
         }
         .page-nav{
-            @include breakpoint('pebble'){
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                background: transparent;
-            }
             &-trigger{
                 @include pos(a,'t-1.5rem' 'r2rem' 2);
                 display: inline-block;
@@ -67,9 +49,6 @@
                 &:hover{
                     color: color(white);
                 }
-                @include breakpoint('pebble'){
-                    display: none;
-                }
             }
             ul{
                 @include pos(a,t1rem r1rem 1);
@@ -80,16 +59,9 @@
                 box-shadow:
                     0 .5rem 0 fade-out(color(black),.8),
                     0 0 .2rem fade-out(color(black),.8);
-                @include breakpoint('pebble'){
-                    @include pos(r,t0 r0);
-                    display: block;
-                    padding: 0;
-                    border-radius: 0;
-                    background: transparent;
-                    box-shadow: none;
-                }
             }
             li{
+                display: inline;
                 margin: 0;
                 text-transform: uppercase;
                 a{
@@ -104,26 +76,6 @@
                             content:' ';
                             display: block;
                             background: color(link);
-                        }
-                    }
-                }
-                @include breakpoint('pebble'){
-                    display: inline-block;
-                    &:not(:last-of-type):after{
-                        content:'/';
-                        display: inline-block;
-                        margin: 0 1rem;
-                        color: color(white);
-                    }
-                    a{
-                        display: inline-block;
-                        padding: 0;
-                        color: color(white);
-                        &.is--active{
-                            &:after{
-                                @include pos(r,t0 l0);
-                                @include setsize(100% .2rem);
-                            }
                         }
                     }
                 }
@@ -144,6 +96,61 @@
     }
 
 
+    @include breakpoint('pebble') {
+
+        > .layoutwrap{
+            text-align: center;
+            padding: {
+                top: 3rem;
+                bottom: 3rem;
+            };
+        }
+        @at-root{
+            .page-logo{
+                @include setsize(16rem 6rem);
+                flex-basis: 16rem;
+            }
+            .page-nav{
+                padding: 1rem 0;
+                background: fade-out(#380047,.5);
+                text-align: center;
+                &-trigger{
+                    display: none;
+                }
+                ul{
+                    @include pos(r,t0 r0);
+                    display: block;
+                    padding: 0;
+                    border-radius: 0;
+                    background: transparent;
+                    box-shadow: none;
+                }
+                li{
+                    display: inline-block;
+                    &:not(:last-of-type):after{
+                        content:'/';
+                        display: inline-block;
+                        margin: 0 1rem;
+                        color: color(white);
+                    }
+                    a{
+                        display: inline-block;
+                        padding: 0;
+                        color: color(white);
+                        &.is--active{
+                            &:after{
+                                @include pos(r,t0 l0);
+                                @include setsize(100% .2rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
     /**
      * Compact modifier
      * For no-touch devices only
@@ -151,8 +158,11 @@
     &--compact{
         @include pos(fixed,1);
         width: 100%;
-        @include breakpoint('pebble'){
-            .layoutwrap{
+        .page-tagline{
+            display: none;
+        }
+        @include breakpoint('pebble') {
+            > .layoutwrap{
                 padding: {
                     top: 1rem;
                     bottom: 1rem;
@@ -160,10 +170,12 @@
             }
             .page-logo{
                 @include setsize(14rem 5rem);
-                flex-basis: 14rem;
+                margin-bottom: 0;
             }
         }
+
     }
+
 }
 
 
