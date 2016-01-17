@@ -570,18 +570,17 @@ hr {
 blockquote {
   margin: 0 0 1em 3em; }
   blockquote > p {
-    margin-bottom: .60em;
-    font-size: 1.4em; }
-    blockquote > p:first-child:before {
-      content: '\201C'; }
-    blockquote > p:first-child:after {
-      content: '\201D'; }
+    margin-bottom: 0; }
   blockquote cite {
-    margin: -.5em 0 0 0;
-    font-size: .85em;
-    font-style: italic; }
+    display: block;
+    margin-top: .5em;
+    font-size: .7em;
+    font-style: italic;
+    text-align: right; }
     blockquote cite:before {
       content: '-'; }
+    blockquote cite a {
+      color: currentColor; }
 
 /**
      * Inline quotes
@@ -894,6 +893,8 @@ table {
   .shard .layoutwrap {
     padding-top: 4rem;
     padding-bottom: 4rem; }
+  .shard:nth-child(even) {
+    background: #BDBDBD; }
   .shard--theme-inverted {
     background-color: #05D6BF;
     color: #fff; }

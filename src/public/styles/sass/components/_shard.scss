@@ -41,6 +41,9 @@
             @extend .selltext;
         }
     }
+    &:nth-child(even){
+        background: #BDBDBD;
+    }
 
     /**
      * Themes

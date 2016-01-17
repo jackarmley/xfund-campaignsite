@@ -60,21 +60,19 @@ hr{
     blockquote{
         margin: 0 0 1em 3em;
         > p{
-            margin-bottom: .60em;
-            font-size: 1.4em;
-            &:first-child:before{
-                content: '\201C';
-            }
-            &:first-child:after{
-                content: '\201D';
-            }
+            margin-bottom: 0;
         }
         cite{
-            margin: -.5em 0 0 0;
-            font-size: .85em;
+            display: block;
+            margin-top: .5em;
+            font-size: .7em;
             font-style: italic;
+            text-align: right;
             &:before{
                 content: '-';
+            }
+            a{
+                color: currentColor;
             }
         }
     }
