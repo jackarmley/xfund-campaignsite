@@ -49,5 +49,5 @@ index
 
 All icons from the Noun Project.
 
-Thanks for Icons by Noun Project designers: ▲▲▲_Map; Oliviu Stoian, Laura Golben. Jim Slatton, Felix Westphal, Anton Scherbik, chicabubble, Milky Digital Innovation. collaborativelearning and Christian Wad
+Thanks for Icons by Noun Project designers: ▲▲▲_Map; Oliviu Stoian, Laura Golben. [Jim Slatton](https://thenounproject.com/search/?q=envelope+wings&i=135893), Felix Westphal, [Anton Scherbik](https://thenounproject.com/search/?q=scissors&i=170719), chicabubble, Milky Digital Innovation, [Duke Innovation CoLab](https://thenounproject.com/search/?q=collaborative+learning&i=27467) and Christian Wad
 

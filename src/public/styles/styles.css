@@ -694,10 +694,10 @@ dfn, abbr {
  * Link styles
  */
 a {
-  color: #05D6BF;
+  color: #5BDFFF;
   text-decoration: underline; }
   a:hover {
-    color: #05D6BF;
+    color: #5BDFFF;
     text-decoration: none; }
   a[href^="tel"] {
     color: inherit; }
@@ -710,19 +710,19 @@ a {
  */
 ::selection {
   color: #fff;
-  background: #05D6BF; }
+  background: #5BDFFF; }
 
 ::-webkit-selection {
   color: #fff;
-  background: #05D6BF; }
+  background: #5BDFFF; }
 
 ::-moz-selection {
   color: #fff;
-  background: #05D6BF; }
+  background: #5BDFFF; }
 
 ::-ms-selection {
   color: #fff;
-  background: #05D6BF; }
+  background: #5BDFFF; }
 
 /**
  * Form elements
@@ -896,7 +896,7 @@ table {
   .shard:nth-child(even) {
     background: #BDBDBD; }
   .shard--theme-inverted {
-    background-color: #05D6BF;
+    background-color: #5BDFFF;
     color: #fff; }
 
 /**
@@ -907,7 +907,7 @@ table {
   margin-bottom: 1em;
   padding: 2rem;
   border-radius: .5rem;
-  background: #05D6BF;
+  background: #5BDFFF;
   color: #fff;
   text-decoration: none; }
   .button:hover {
@@ -996,7 +996,7 @@ html {
         height: 100%;
         content: ' ';
         display: block;
-        background: #05D6BF; }
+        background: #5BDFFF; }
   .page-nav.is--active ul {
     display: block; }
   .page-nav.is--active .page-nav-trigger {
@@ -1004,7 +1004,7 @@ html {
     height: 3.5rem;
     top: -1rem;
     padding: 0;
-    color: #05D6BF;
+    color: #5BDFFF;
     line-height: 2; }
   @media (min-width: 43.75em) {
     .page-header > .layoutwrap {
@@ -1120,7 +1120,7 @@ html {
     display: block;
     border-radius: 100%;
     color: #fff;
-    background: #05D6BF;
+    background: #5BDFFF;
     font-size: 1.5em;
     line-height: 6rem;
     text-decoration: none;
@@ -1139,7 +1139,7 @@ html {
     flex-basis: 10rem;
     border: none;
     border-radius: .5rem;
-    background: #05D6BF;
+    background: #5BDFFF;
     color: #fff; }
     .join button:hover {
       background: #FF4BCD; }
