@@ -1133,7 +1133,8 @@ html {
 .join {
   display: flex; }
   .join input {
-    margin: 0 2rem 0 0; }
+    margin: 0 2rem 0 0;
+    border: 0.2rem solid gray; }
   .join button {
     flex-basis: 10rem;
     border: none;
