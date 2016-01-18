@@ -29,10 +29,10 @@ index
 
 ### Header images
 
-# ### Why XFund
+#### Why XFund
 [Image](https://www.facebook.com/photo.php?fbid=10154366456118712&set=a.10152039822008712.1073741831.615868711&type=3&theater) by Linda Mizun
 
-# ### Stories
+#### Stories
 [Image](https://www.facebook.com/proactivaservice/photos/pb.111995985497928.-2207520000.1450140814./1027467373950780/?type=3&theater) by ProActiva Open Arms
 
 #### Transparency
