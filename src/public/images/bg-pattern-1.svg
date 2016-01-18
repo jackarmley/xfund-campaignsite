@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="252px" height="252px" viewBox="0 0 252 252" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>bg-pattern-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="bg-pattern-1" sketch:type="MSArtboardGroup" fill="#FF4BCD">
+            <path d="M0,252 L62,252 L31,209 L0,252 Z" id="Shape" opacity="0.396595149" sketch:type="MSShapeGroup"></path>
+            <path d="M190,43 L252,43 L221,0 L190,43 Z" id="Shape" opacity="0.295965485" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -41,17 +41,32 @@
             @extend .selltext;
         }
     }
-    &:nth-child(even){
-        background: #BDBDBD;
-    }
 
     /**
      * Themes
      */
-    &--theme{
-        &-inverted{
-            background-color: color(link);
-            color: color(white);
+    &:nth-child(4n+1){
+        background:
+            url('../images/bg-pattern-2.svg')
+            repeat center center/30rem 30rem fixed,
+            linear-gradient(to bottom,lighten($teal,20%),lighten($teal,25%))
+            lighten($teal,30%)
+        ;
+        .shard-heading{
+            color: darken($teal,40%);
+        }
+    }
+    &:nth-child(4n+2){
+    }
+    &:nth-child(4n+3){
+        background:
+            url('../images/bg-pattern-1.svg')
+            repeat center center/30rem 30rem fixed,
+            linear-gradient(to bottom,lighten($pink,30%),lighten($pink,45%))
+            lighten($pink,30%)
+        ;
+        .shard-heading{
+            color: darken($pink,30%);
         }
     }
 }

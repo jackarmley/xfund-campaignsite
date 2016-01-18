@@ -5,7 +5,7 @@ mixin shard(heading, sellintro, hideheading, theme, bg)
     -var theme = theme || "default";
     - var bg = bg || false;
     - var id = heading.replace(" ","-").toLowerCase();
-    section.shard(class="shard--sellintro-#{sellintro} shard--hideheading-#{hideheading} shard--theme-#{theme}" style="background-image:url(#{bg});" id="#{id}")
+    section.shard(class="shard--sellintro-#{sellintro} shard--hideheading-#{hideheading} shard--theme-#{theme}" id="#{id}")
         .layoutwrap
             h2.shard-heading= heading
             block

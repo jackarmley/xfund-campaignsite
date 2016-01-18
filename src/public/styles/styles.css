@@ -694,10 +694,10 @@ dfn, abbr {
  * Link styles
  */
 a {
-  color: #5BDFFF;
+  color: #FF4BCD;
   text-decoration: underline; }
   a:hover {
-    color: #5BDFFF;
+    color: #FF4BCD;
     text-decoration: none; }
   a[href^="tel"] {
     color: inherit; }
@@ -710,19 +710,19 @@ a {
  */
 ::selection {
   color: #fff;
-  background: #5BDFFF; }
+  background: #FF4BCD; }
 
 ::-webkit-selection {
   color: #fff;
-  background: #5BDFFF; }
+  background: #FF4BCD; }
 
 ::-moz-selection {
   color: #fff;
-  background: #5BDFFF; }
+  background: #FF4BCD; }
 
 ::-ms-selection {
   color: #fff;
-  background: #5BDFFF; }
+  background: #FF4BCD; }
 
 /**
  * Form elements
@@ -893,11 +893,14 @@ table {
   .shard .layoutwrap {
     padding-top: 4rem;
     padding-bottom: 4rem; }
-  .shard:nth-child(even) {
-    background: #BDBDBD; }
-  .shard--theme-inverted {
-    background-color: #5BDFFF;
-    color: #fff; }
+  .shard:nth-child(4n+1) {
+    background: url("../images/bg-pattern-2.svg") repeat center center/30rem 30rem fixed, linear-gradient(to bottom, #c1f3ff, #dbf8ff) #f4fdff; }
+    .shard:nth-child(4n+1) .shard-heading {
+      color: #00728e; }
+  .shard:nth-child(4n+3) {
+    background: url("../images/bg-pattern-1.svg") repeat center center/30rem 30rem fixed, linear-gradient(to bottom, #ffe4f8, white) #ffe4f8; }
+    .shard:nth-child(4n+3) .shard-heading {
+      color: #b10080; }
 
 /**
  * Buttons
@@ -907,7 +910,7 @@ table {
   margin-bottom: 1em;
   padding: 2rem;
   border-radius: .5rem;
-  background: #5BDFFF;
+  background: #FF4BCD;
   color: #fff;
   text-decoration: none; }
   .button:hover {
@@ -996,7 +999,7 @@ html {
         height: 100%;
         content: ' ';
         display: block;
-        background: #5BDFFF; }
+        background: #FF4BCD; }
   .page-nav.is--active ul {
     display: block; }
   .page-nav.is--active .page-nav-trigger {
@@ -1004,7 +1007,7 @@ html {
     height: 3.5rem;
     top: -1rem;
     padding: 0;
-    color: #5BDFFF;
+    color: #FF4BCD;
     line-height: 2; }
   @media (min-width: 43.75em) {
     .page-header > .layoutwrap {
@@ -1069,7 +1072,7 @@ html {
  * Page footer
  */
 .page-footer {
-  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, linear-gradient(45deg, #FF5891, #FF5891) no-repeat center center #C700F9;
+  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, #5BDFFF;
   background-blend-mode: multiply;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1120,7 +1123,7 @@ html {
     display: block;
     border-radius: 100%;
     color: #fff;
-    background: #5BDFFF;
+    background: #FF4BCD;
     font-size: 1.5em;
     line-height: 6rem;
     text-decoration: none;
@@ -1139,7 +1142,7 @@ html {
     flex-basis: 10rem;
     border: none;
     border-radius: .5rem;
-    background: #5BDFFF;
+    background: #FF4BCD;
     color: #fff; }
     .join button:hover {
       background: #FF4BCD; }

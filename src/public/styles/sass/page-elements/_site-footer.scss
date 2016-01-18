@@ -5,12 +5,7 @@
     background:
         url('../images/header-sample.jpg')
         no-repeat bottom center/cover fixed,
-        linear-gradient(
-            45deg,
-            #FF5891,
-            #FF5891
-        ) no-repeat center center
-        #C700F9;
+        $teal;
     background-blend-mode: multiply;
     padding: {
         top: 4rem;
