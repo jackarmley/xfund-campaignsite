@@ -8,10 +8,10 @@
         no-repeat bottom center/cover fixed,
         linear-gradient(
             45deg,
-            #FF5891,
-            #FF5891
+            $pink,
+            $pink
         ) no-repeat center center
-        #C700F9;
+        darken($pink,20%);
     background-blend-mode: multiply;
 
     > .layoutwrap{
@@ -101,8 +101,8 @@
         > .layoutwrap{
             text-align: center;
             padding: {
-                top: 3rem;
-                bottom: 3rem;
+                top: 8rem;
+                bottom: 8rem;
             };
         }
         @at-root{

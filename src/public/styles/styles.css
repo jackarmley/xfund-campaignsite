@@ -935,7 +935,7 @@ html {
  * Page header
  */
 .page-header {
-  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, linear-gradient(45deg, #FF5891, #FF5891) no-repeat center center #C700F9;
+  background: url("../images/header-sample.jpg") no-repeat bottom center/cover fixed, linear-gradient(45deg, #FF4BCD, #FF4BCD) no-repeat center center #e400a5;
   background-blend-mode: multiply;
   /**
      * Compact modifier
@@ -1012,8 +1012,8 @@ html {
   @media (min-width: 43.75em) {
     .page-header > .layoutwrap {
       text-align: center;
-      padding-top: 3rem;
-      padding-bottom: 3rem; }
+      padding-top: 8rem;
+      padding-bottom: 8rem; }
     .page-logo {
       width: 16rem;
       height: 6rem;

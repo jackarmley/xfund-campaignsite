@@ -30,21 +30,16 @@ i18n.configure({
  * Routes
  */
 app.get('/', function(req, res){
-    res.locals.title = "Empowering independent volunteers";
+    res.locals.title = "Launch the world’s first XFund in 30 days";
+    res.locals.headerimage = "stories.jpg";
     res.render("index", {
-        url : req.originalUrl
-    });
-});
-
-app.get('/about', function(req, res){
-    res.locals.title = "About";
-    res.render("about", {
         url : req.originalUrl
     });
 });
 
 app.get('/whyxfund', function(req, res){
     res.locals.title = "Why X Fund";
+    res.locals.headerimage = "whyxfund.jpg";
     res.render("whyxfund", {
         url : req.originalUrl
     });
@@ -52,20 +47,15 @@ app.get('/whyxfund', function(req, res){
 
 app.get('/stories', function(req, res){
     res.locals.title = "Stories";
+    res.locals.headerimage = "stories.jpg";
     res.render("stories", {
-        url : req.originalUrl
-    });
-});
-
-app.get('/contact', function(req, res){
-    res.locals.title = "Contact us";
-    res.render("contact", {
         url : req.originalUrl
     });
 });
 
 app.get('/transparency', function(req, res){
     res.locals.title = "Transparency";
+    res.locals.headerimage = "transparency.jpg";
     res.render("transparency", {
         url : req.originalUrl
     });
@@ -73,10 +63,20 @@ app.get('/transparency', function(req, res){
 
 app.get('/toolkit', function(req, res){
     res.locals.title = "Toolkit";
+    res.locals.headerimage = "toolkit.jpg";
     res.render("toolkit", {
         url : req.originalUrl
     });
 });
+
+app.get('/contact', function(req, res){
+    res.locals.title = "Contact us";
+    res.locals.headerimage = "contact.jpg";
+    res.render("contact", {
+        url : req.originalUrl
+    });
+});
+
 
 app.get('/blog/:id?', function(req, res){
     var id = req.params.id;

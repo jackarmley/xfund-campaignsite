@@ -1,9 +1,7 @@
 extends master
 
 block pagecontent
-    +shard(locals.title, true, true)
-        p Launch the world’s first XFund in 30 days.
-        include partials/_activatexfund
+    +shard(locals.title, true)
         p.
             We are X Fund is the world’s first peer-to-peer microfund for crisis
             regions designed for rapid response where time matters. It’s
@@ -11,6 +9,7 @@ block pagecontent
         p.
             We give NGOs and volunteers at the frontlines access to the
             financial resources they need to deal with unexpected emergencies.
+        include partials/_activatexfund
 
     +shard('Discover the real story', true)
         p Experience the real stories behind the #HumanSideoftheCoin.
