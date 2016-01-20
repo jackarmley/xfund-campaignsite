@@ -568,17 +568,18 @@ hr {
      * Blockquotes
      */
 blockquote {
-  margin: 0 0 1em 3em; }
+  margin: 3em 0 3em 3em; }
   blockquote > p {
+    font-size: 1.2em;
+    font-family: "montserratbold", sans-serif;
     margin-bottom: 0; }
   blockquote cite {
+    font-family: "montserratregular", sans-serif;
+    font-style: normal;
     display: block;
-    margin-top: .5em;
+    margin-top: 1em;
     font-size: .7em;
-    font-style: italic;
-    text-align: right; }
-    blockquote cite:before {
-      content: '-'; }
+    text-align: center; }
     blockquote cite a {
       color: currentColor; }
 
@@ -894,13 +895,25 @@ table {
     padding-top: 4rem;
     padding-bottom: 4rem; }
   .shard:nth-child(4n+1) {
+    border-top: 0.1rem solid #98ebff;
+    border-bottom: 0.1rem solid #98ebff;
     background: url("../images/bg-pattern-2.svg") repeat center center/30rem 30rem fixed, linear-gradient(to bottom, #c1f3ff, #dbf8ff) #f4fdff; }
-    .shard:nth-child(4n+1) .shard-heading {
+    .shard:nth-child(4n+1) .shard-heading,
+    .shard:nth-child(4n+1) blockquote > p {
       color: #00728e; }
+      .shard:nth-child(4n+1) .shard-heading cite,
+      .shard:nth-child(4n+1) blockquote > p cite {
+        color: #3A3B36; }
   .shard:nth-child(4n+3) {
+    border-top: 0.1rem solid #ffb1e9;
+    border-bottom: 0.1rem solid #ffb1e9;
     background: url("../images/bg-pattern-1.svg") repeat center center/30rem 30rem fixed, linear-gradient(to bottom, #ffe4f8, white) #ffe4f8; }
-    .shard:nth-child(4n+3) .shard-heading {
+    .shard:nth-child(4n+3) .shard-heading,
+    .shard:nth-child(4n+3) blockquote > p {
       color: #b10080; }
+      .shard:nth-child(4n+3) .shard-heading cite,
+      .shard:nth-child(4n+3) blockquote > p cite {
+        color: #3A3B36; }
 
 /**
  * Buttons
@@ -1095,12 +1108,15 @@ html {
   flex-flow: row wrap;
   justify-content: space-between;
   margin: 0 -1rem 1rem;
+  padding: 2rem 0 0 0;
   overflow: hidden;
   list-style: none;
   text-align: center; }
   .featurelist-feature {
     flex: 1 1 20rem;
     margin: 0 1rem 2rem; }
+  .featurelist-heading {
+    font-size: 1.5em; }
 
 .image--rounded img {
   min-width: 20rem;

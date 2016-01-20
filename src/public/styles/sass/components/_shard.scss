@@ -45,28 +45,57 @@
     /**
      * Themes
      */
+
+    @mixin shardpanel($color,$bg){
+        border-top: .1rem solid lighten($color,12%);
+        border-bottom: .1rem solid lighten($color,12%);
+        background:
+            url('#{$bg}')
+            repeat center center/30rem 30rem fixed,
+            linear-gradient(to bottom,lighten($color,20%),lighten($color,25%))
+            lighten($color,30%)
+        ;
+        .shard-heading,
+        blockquote > p{
+            color: darken($color,40%);
+            cite{
+                color: color(default);
+            }
+        }
+    }
+
     &:nth-child(4n+1){
+        border-top: .1rem solid lighten($teal,12%);
+        border-bottom: .1rem solid lighten($teal,12%);
         background:
             url('../images/bg-pattern-2.svg')
             repeat center center/30rem 30rem fixed,
             linear-gradient(to bottom,lighten($teal,20%),lighten($teal,25%))
             lighten($teal,30%)
         ;
-        .shard-heading{
+        .shard-heading,
+        blockquote > p{
             color: darken($teal,40%);
+            cite{
+                color: color(default);
+            }
         }
     }
-    &:nth-child(4n+2){
-    }
     &:nth-child(4n+3){
+        border-top: .1rem solid lighten($pink,20%);
+        border-bottom: .1rem solid lighten($pink,20%);
         background:
             url('../images/bg-pattern-1.svg')
             repeat center center/30rem 30rem fixed,
             linear-gradient(to bottom,lighten($pink,30%),lighten($pink,45%))
             lighten($pink,30%)
         ;
-        .shard-heading{
+        .shard-heading,
+        blockquote > p{
             color: darken($pink,30%);
+            cite{
+                color: color(default);
+            }
         }
     }
 }

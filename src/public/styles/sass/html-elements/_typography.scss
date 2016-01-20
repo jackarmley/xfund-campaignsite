@@ -58,19 +58,17 @@ hr{
      * Blockquotes
      */
     blockquote{
-        margin: 0 0 1em 3em;
+        margin: 3em 0 3em 3em;
         > p{
+            @include font(1.2em, pageheading);
             margin-bottom: 0;
         }
         cite{
+            @include font(false, default, style-normal);
             display: block;
-            margin-top: .5em;
+            margin-top: 1em;
             font-size: .7em;
-            font-style: italic;
-            text-align: right;
-            &:before{
-                content: '-';
-            }
+            text-align: center;
             a{
                 color: currentColor;
             }
