@@ -10,6 +10,13 @@ header.page-header(role="banner" style="background-image:url('/static/images/hea
                         -var activeClass = ''
                     li: a(href= '/' + menuItem class=activeClass)
                         != menuItem
-    .layoutwrap
-        a.page-logo(href="/") X fund
-        p.page-tagline The first peer-to-peer microfund for crisis regions designed for rapid response.
+    -if(url === '/')
+        .layoutwrap.page-logowrapper.page-logowrapper--home
+            a.page-logo(href="/") X fund
+            p.page-tagline The first peer-to-peer microfund for crisis regions designed for rapid response.
+    -else
+        .layoutwrap.page-logowrapper
+            a.page-logo(href="/") X fund
+            h1.page-title= locals.title
+
+

@@ -34,6 +34,11 @@
             margin-bottom: 0;
             color: color(white);
         }
+        .page-title{
+            margin: 0;
+            color: color(white);
+            @include font(2em, default);
+        }
         .page-nav{
             &-trigger{
                 @include pos(a,'t-1.5rem' 'r2rem' 2);
@@ -108,7 +113,9 @@
         @at-root{
             .page-logo{
                 @include setsize(16rem 6rem);
-                flex-basis: 16rem;
+            }
+            .page-title{
+                @include font(6em);
             }
             .page-nav{
                 padding: 1rem 0;
@@ -158,15 +165,12 @@
     &--compact{
         @include pos(fixed,1);
         width: 100%;
-        .page-tagline{
+        .page-title{
             display: none;
         }
         @include breakpoint('pebble') {
-            > .layoutwrap{
-                padding: {
-                    top: 1rem;
-                    bottom: 1rem;
-                }
+            .page-logowrapper{
+                display: none;
             }
             .page-logo{
                 @include setsize(14rem 5rem);

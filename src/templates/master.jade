@@ -1,9 +1,13 @@
 include partials/_mixins
+-if(url === '/')
+    -var bodyClass = 'index';
+-else
+    -var bodyClass = url;
 doctype html
 html
     head
         include partials/_head
-    body
+    body(class=bodyClass)
         include partials/_header
         .page-content
             block pagecontent

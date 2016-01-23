@@ -3,7 +3,7 @@
  * Act one
  * Built with Empty Coop, by Hatchd Digital
  */
-.hide, .shard--hideheading-true .shard-heading {
+.hide, .shard--hideheading-true .shard-heading, .page-content > .shard:first-of-type .shard-heading {
   width: 1px;
   height: 1px;
   position: absolute;
@@ -885,6 +885,10 @@ table {
      */
   /**
      * Themes
+     */
+  /**
+     * Hide heading of first shard if used
+     * for page title
      */ }
   .shard-heading {
     font-size: 2em;
@@ -894,6 +898,8 @@ table {
   .shard .layoutwrap {
     padding-top: 4rem;
     padding-bottom: 4rem; }
+    .shard .layoutwrap > :last-child {
+      margin-bottom: 0; }
   .shard:nth-child(4n+1) {
     border-top: 0.1rem solid #98ebff;
     border-bottom: 0.1rem solid #98ebff;
@@ -969,6 +975,11 @@ html {
   .page-tagline {
     margin-bottom: 0;
     color: #fff; }
+  .page-title {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
+    font-family: "montserratregular", sans-serif; }
   .page-nav-trigger {
     position: absolute;
     top: -1.5rem;
@@ -1029,8 +1040,9 @@ html {
       padding-bottom: 8rem; }
     .page-logo {
       width: 16rem;
-      height: 6rem;
-      flex-basis: 16rem; }
+      height: 6rem; }
+    .page-title {
+      font-size: 6em; }
     .page-nav {
       padding: 1rem 0;
       background: rgba(56, 0, 71, 0.5);
@@ -1067,12 +1079,11 @@ html {
     position: fixed;
     z-index: 1;
     width: 100%; }
-    .page-header--compact .page-tagline {
+    .page-header--compact .page-title {
       display: none; }
     @media (min-width: 43.75em) {
-      .page-header--compact > .layoutwrap {
-        padding-top: 1rem;
-        padding-bottom: 1rem; }
+      .page-header--compact .page-logowrapper {
+        display: none; }
       .page-header--compact .page-logo {
         width: 14rem;
         height: 5rem;

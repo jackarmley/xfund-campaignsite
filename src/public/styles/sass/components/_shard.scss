@@ -26,6 +26,9 @@
             top: 4rem;
             bottom: 4rem;
         };
+        > :last-child{
+            margin-bottom: 0;
+        }
     }
 
     /**
@@ -95,6 +98,18 @@
             color: darken($pink,30%);
             cite{
                 color: color(default);
+            }
+        }
+    }
+
+    /**
+     * Hide heading of first shard if used
+     * for page title
+     */
+    .page-content > & {
+        &:first-of-type {
+            .shard-heading{
+                @extend %visual-hide;
             }
         }
     }
